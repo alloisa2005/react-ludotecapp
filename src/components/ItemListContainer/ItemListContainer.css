@@ -1,0 +1,28 @@
+
+
+.item_list_container {
+    min-height: calc(100vh - 70px - 60px);  /* resto las medidas del header y footer */
+    width: 90%;    
+    margin: 0 auto;    
+    text-align: center;    
+}
+
+.titulo {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-top: .5em;    
+}
+
+.greeting {
+    font-size: 1.6rem;
+    margin-top: .3em;    
+}
+
+.loading_div {
+    height: 300px;
+}
+.loading {
+    margin-top: 20px;
+    width: 100%; 
+    height: 100px;    
+}

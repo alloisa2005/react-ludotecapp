@@ -1,0 +1,36 @@
+
+.error_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_img {
+    width: 100%;
+    height: 80vh;    
+    object-fit: contain;
+}
+
+.error_btn {
+    margin-bottom: 15px;
+    background-color: #030C40;
+    padding: 12px 60px;
+    color: white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #030C40;
+    transition: all 200ms ease-in;
+    font-weight: bold;
+}
+
+.error_btn:hover {
+    cursor: pointer;   
+    color: #030C40; 
+    background-color: white;    
+    font-weight: bold;
+}
+

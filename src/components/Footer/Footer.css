@@ -1,0 +1,30 @@
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #030C40;    
+    padding: 10px 35px;    
+    color: white;
+    height: 65px;
+}
+
+.footer__icon {
+    margin-right: 15px;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.footer__left h3 { 
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+}
+
+.footer_right {
+    display: flex;
+    align-items: center;
+}
+
+.footer_right h4 {
+    margin-right: 8px;
+}

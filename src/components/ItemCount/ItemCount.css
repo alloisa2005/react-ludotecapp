@@ -1,0 +1,74 @@
+
+.itemCount_container {    
+    display: grid;
+    place-items: center;    
+    margin: 10px 0;
+    user-select: none;    
+}
+
+.itemCount_controles {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+.itemCount_controles_button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #030C40;
+    background-color: #030C40;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0 15px;
+}
+
+.itemCount_controles p {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.itemCount_unidades {
+    padding-top: 15px;
+    font-size: 17px;
+    margin-bottom: .5rem;
+}
+
+.itemCount_unidades span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.buttons_container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.itemCount_btn_cart {
+    text-align: center;
+    padding: 9px 20px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;  
+    border-radius: 10px;
+    background-color: #030C40;
+    color: white;
+    border: 1px solid #030C40;
+    cursor: pointer;
+}
+
+.itemCount_unidades {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.itemCount_unidades span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

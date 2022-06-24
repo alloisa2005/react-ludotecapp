@@ -1,0 +1,13 @@
+
+.video_container {
+    width: 93%;
+    margin: 10px auto;
+    display: grid;
+    place-items: center;
+}
+
+.video_container_iframe {
+    margin-top: 10px;
+    width: 85%;
+    height: 450px;
+}

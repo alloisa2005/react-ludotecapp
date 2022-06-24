@@ -1,0 +1,187 @@
+
+.img_portada {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+.img_portada img{   
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;       
+}
+
+.degradado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 33;
+    background: linear-gradient(to bottom,transparent, #F9F9F9);     
+}
+
+.item_detail {
+    width: 85%;
+    margin: 20px auto;    
+}
+
+.item_detail h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 2.5rem;
+    color: #030C40;
+}
+
+.item_detail_container{
+    margin-top: 15px;
+    display: flex;
+}
+
+.item_left {
+    flex: 0.65;
+    
+}
+
+.item_left_img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.item_right {
+    background-color: #E8E8EC;
+    flex: 0.35;
+    padding: 15px 20px;
+}
+
+.item_right_disp {
+    font-size: 1.1rem;    
+}
+
+.item_right_disp span{
+    font-weight: bold;
+}
+
+.item_right_precio {    
+    margin-top: 20px;
+    font-size: 2.2rem;
+    font-weight: bold;    
+}
+
+.item_right_iconos{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon_div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon_div_icon {
+    width: 50px!important;
+    height: 50px!important;
+    color: white;
+    background-color: #030C40;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.icon_div p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.division {
+    margin-top: 15px;
+    width: 100%;
+    height: 2px;
+    background-color: lightgrey;
+}
+
+.cart_container { 
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart_container button {
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #030C40;
+    font-size: 1.2rem;
+    border-radius: 10px;    
+}
+
+.cart_container input {
+    width: 50px;
+    height: 40px;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    user-select: none;    
+    border: none; 
+    outline: none;
+}
+
+.btn_container {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+.btn_agregar {
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;  
+    border-radius: 10px;
+    background-color: #030C40;
+    color: white;
+    border: 1px solid #030C40;
+}
+
+.icon_envio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icon_envio p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.item_detail_game {
+    width: 100%;
+    margin-top: 20px;
+}
+.item_detail_subtitle {
+    font-family: 'Special Elite', cursive;
+    font-size: 2.0rem;
+    color: #030C40;
+}
+
+.item_detail_game_desc {    
+    width: 93%;
+    margin: 10px auto;
+}
+
+.item_detail_game_desc p {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
