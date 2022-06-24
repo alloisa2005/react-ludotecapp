@@ -20,10 +20,12 @@ function ItemDetail({ juego }) {
 
   return (
     <>
-      <div className="img_portada">
-        <img src={juego.img_portada} alt={juego.nombre}/>
-        <div className="degradado"></div>
-      </div>      
+      {juego.categoria === 'accesorio' ? null :
+        <div className="img_portada">
+          <img src={juego.img_portada} alt={juego.nombre}/>
+          <div className="degradado"></div>
+        </div>
+      }      
 
       <div className="item_detail">        
         <h1>{juego.nombre}</h1>
@@ -39,7 +41,8 @@ function ItemDetail({ juego }) {
             </p>
             <p className="item_right_precio">$ {separadorMiles(juego.precio)}</p>            
 
-            <div className="item_right_iconos">
+            {juego.categoria === 'accesorio' ? null :
+              <div className="item_right_iconos">
               <div className="icon_div">
                 <PeopleRoundedIcon className="icon_div_icon" />
                 <p>
@@ -57,6 +60,7 @@ function ItemDetail({ juego }) {
                 <p>{juego.tiempo}</p>
               </div>
             </div>
+            }
 
             <div className="division"></div>
 
