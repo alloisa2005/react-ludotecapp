@@ -8,11 +8,7 @@ import { Link } from 'react-router-dom';
 // Componentes
 import CartWidget from "../CartWidget/CartWidget";
 
-function NavBar() {  
- 
-  let cat_cartas = "carta";
-  let cat_tablero = "tablero";
-  let cat_accesorio = "accesorio";
+function NavBar() {   
 
   return (    
     <header className="header"> 
@@ -24,9 +20,9 @@ function NavBar() {
 
       <nav className="header__right">
         <ul>
-          <Link to={ `/category/${cat_cartas}` } className="li_item">Juegos de Cartas</Link>
-          <Link to={ `/category/${cat_tablero}` } className="li_item">Juegos de Tablero</Link>          
-          <Link to={ `/category/${cat_accesorio}` } className="li_item">Accesorios</Link>                    
+          <Link to={ "/category/carta" } className="li_item">Juegos de Cartas</Link>
+          <Link to={ "/category/tablero" } className="li_item">Juegos de Tablero</Link>          
+          <Link to={ "/category/accesorio" } className="li_item">Accesorios</Link>                    
 
           <CartWidget />          
         </ul>
