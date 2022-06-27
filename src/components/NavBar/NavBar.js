@@ -20,6 +20,7 @@ function NavBar() {
 
       <nav className="header__right">
         <ul>
+        <Link to={ "/" } className="li_item">Inicio</Link>
           <Link to={ "/category/carta" } className="li_item">Juegos de Cartas</Link>
           <Link to={ "/category/tablero" } className="li_item">Juegos de Tablero</Link>          
           <Link to={ "/category/accesorio" } className="li_item">Accesorios</Link>                    

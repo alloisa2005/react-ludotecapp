@@ -9,8 +9,7 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail";
 function ItemDetailContainer() {
   const [juego, setJuego] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
-  // A modo de prueba seteo el id = 1
+  
   let { id } = useParams();
 
   useEffect(() => {

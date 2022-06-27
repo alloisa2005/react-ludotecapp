@@ -36,7 +36,7 @@ export const listaJuegos = [
     nombre: "Oh My Goods",
     categoria: "carta",
     descripcion: "En Oh My Goods! los jugadores son artesanos de la Edad Media europea. Estos producirán herramientas, barrilas, ventanas y muchos otros bienes. Solo un uso inteligente de la producción proporcionará más puntos de victoria que el resto de competidores.",
-    img: "https://partidaimpugnada.com/wp-content/uploads/2020/08/IMG_20200811_102108-763x1024.jpg",
+    img: "https://losmoscasaravaca.com/wp-content/uploads/2022/01/lkgomg01es_1_1.jpg",
     img_portada: "http://www.nonsensicalgamers.com/wp-content/uploads/2016/06/ohmygoods07.jpg",
     yt: "dIWyPDhqHk4",
     precio: 1800,
@@ -197,6 +197,18 @@ export const getJuegosTablero = () => {
     setTimeout(() => {
       if (listaJuegos.length > 0) {        
         resolve(listaJuegos.filter(juego => juego.categoria === "tablero"));
+      } else {
+        reject("Sin datos");
+      }
+    }, 1000);
+  });
+};
+
+export const getJuegosPorCategoria = (cate) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (listaJuegos.length > 0) {        
+        resolve(listaJuegos.filter(juego => juego.categoria === cate));
       } else {
         reject("Sin datos");
       }

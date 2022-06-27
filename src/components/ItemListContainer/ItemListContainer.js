@@ -1,28 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ItemListContainer.css";
 
-import ItemCount from "../ItemCount/ItemCount";
+
 import ItemList from "../ItemList/ItemList";
 
 import CircularProgress from "@mui/material/CircularProgress";
-import {
-  getAccesorios,
-  getJuegos,
-  getJuegosCartas,
-  getJuegosTablero,
+import {  
+  getJuegos,  
+  getJuegosPorCategoria  
 } from "../../data/juegos";
 import { useParams } from "react-router-dom";
 
-function ItemListContainer({ greeting }) {
-  //const [initial, setInitial] = useState(1);
-  //let stock = 5;
-  /* function onAdd() {   
-    alert(`Producto agregado al carrito`);
-    console.log('Producto agregado al Carrito'); 
-  }   */
-
-  /* const [users, setUsers] = useState([]); */
-  /* let url = "https://randomuser.me/api/?results=16"; */
+function ItemListContainer({ greeting }) {  
 
   const [juegos, setJuegos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);  
@@ -31,38 +20,23 @@ function ItemListContainer({ greeting }) {
 
   let { tipo } = useParams();
 
-  useEffect(() => {
-    /* setTimeout(() => {      
-      setIsLoading(true);
-      filtrarJuegos(tipo);            
-    }, 2000); */
+  useEffect(() => {    
     setIsLoading(true);
     filtrarJuegos(tipo);  
-
   }, [tipo]);
   
 
-  const filtrarJuegos = (tipo) => {
+  function filtrarJuegos(tipo) {
     if (tipo === undefined) {
       getJuegos().then((res) => {
         setJuegos(res);  
         setIsLoading(false);      
       });
-    } else if (tipo === "carta") {
-      getJuegosCartas().then((res) => {
-        setJuegos(res);              
-        setIsLoading(false);
-      });
-    } else if (tipo === "tablero") {
-      getJuegosTablero().then((res) => {        
-        setJuegos(res);       
-        setIsLoading(false);   
-      });
-    } else {
-      getAccesorios()
+    } else{
+      getJuegosPorCategoria(tipo)
         .then((res) => {
-          setIsLoading(false);
           setJuegos(res);
+          setIsLoading(false);
         });
     }
   };
