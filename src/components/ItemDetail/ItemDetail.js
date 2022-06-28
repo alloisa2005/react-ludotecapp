@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import "./ItemDetail.css";
 
 import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
@@ -6,11 +6,12 @@ import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
+// Componentes
 import ItemCount from "../ItemCount/ItemCount";
-import { separadorMiles } from "../../utilidades/separadorMiles";
-
 import VideoContainer from "../VideoContainer/VideoContainer";
 import ModalPre from "../Modal/ModalPre";
+
+import { separadorMiles } from "../../utilidades/separadorMiles";
 
 function ItemDetail({ juego }) {  
 
