@@ -23,8 +23,7 @@ function ItemListContainer({ greeting }) {
   useEffect(() => {    
     setIsLoading(true);
     filtrarJuegos(tipo);  
-  }, [tipo]);
-  
+  }, [tipo]);    
 
   function filtrarJuegos(tipo) {
     if (tipo === undefined) {

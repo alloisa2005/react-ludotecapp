@@ -7,16 +7,23 @@ import { Link } from 'react-router-dom';
 
 // Componentes
 import CartWidget from "../CartWidget/CartWidget";
+/* import SearchIcon from '@mui/icons-material/Search'; */
 
-function NavBar() {   
+function NavBar({onChangeInput}) {   
 
   return (    
     <header className="header"> 
 
       <Link to="/" className="header__left">
         <img src={logo} alt="Ludotecapp Logo" className="header__logo" />
-        <h3>Ludotecapp</h3>
+        <h3>Ludotecapp</h3>        
       </Link>      
+
+      {/* <div className="buscar_container">
+        <input className="buscar__input" type="text" placeholder="Buscar..." onChange={onChangeInput}/>     
+        <SearchIcon className="buscar__icon" />     
+      </div> */}
+      
 
       <nav className="header__right">
         <ul>

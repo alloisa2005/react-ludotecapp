@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
@@ -8,7 +9,9 @@ import NavBar from "./components/NavBar/NavBar";
 import Error from "./Pages/Error/Error";
 import CartDetailContainer from "./Pages/CartDetailContainer/CartDetailContainer";
 
-function App() {
+
+function App() {  
+
   return (
     <Router>
 
