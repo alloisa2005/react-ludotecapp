@@ -10,11 +10,10 @@ import Error from "./Pages/Error/Error";
 import CartDetailContainer from "./Pages/CartDetailContainer/CartDetailContainer";
 import CartContextProvider from "./context/CartContext";
 
-
 function App() {  
 
   return (
-    <Router>
+    <Router>      
 
       <CartContextProvider>
         <div className="App">
