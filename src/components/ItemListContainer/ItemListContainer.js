@@ -14,9 +14,7 @@ import { useParams } from "react-router-dom";
 function ItemListContainer({ greeting }) {  
 
   const [juegos, setJuegos] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);  
-
-  console.log(isLoading);  
+  const [isLoading, setIsLoading] = useState(true);    
 
   let { tipo } = useParams();
 

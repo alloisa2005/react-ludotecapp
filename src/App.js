@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
@@ -8,6 +8,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import NavBar from "./components/NavBar/NavBar";
 import Error from "./Pages/Error/Error";
 import CartDetailContainer from "./Pages/CartDetailContainer/CartDetailContainer";
+import CartContextProvider from "./context/CartContext";
 
 
 function App() {  
@@ -15,19 +16,21 @@ function App() {
   return (
     <Router>
 
-      <div className="App">
-        <NavBar />        
+      <CartContextProvider>
+        <div className="App">
+          <NavBar />        
 
-        <Routes>
-          <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
-          <Route path="/category/:tipo" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
-          <Route path="/item/:id" element={ <ItemDetailContainer /> } />          
-          <Route path="/cart" element={ <CartDetailContainer /> } />
-          <Route path="*" element={ <Error /> } />          
-        </Routes>        
-        
-        <Footer />
-      </div>
+          <Routes>
+            <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
+            <Route path="/category/:tipo" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
+            <Route path="/item/:id" element={ <ItemDetailContainer /> } />          
+            <Route path="/cart" element={ <CartDetailContainer /> } />
+            <Route path="*" element={ <Error /> } />          
+          </Routes>        
+          
+          <Footer />
+        </div>
+      </CartContextProvider>
       
     </Router>
   );
