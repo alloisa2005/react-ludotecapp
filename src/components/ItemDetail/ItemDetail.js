@@ -11,12 +11,16 @@ import ItemCount from "../ItemCount/ItemCount";
 import VideoContainer from "../VideoContainer/VideoContainer";
 import ModalPre from "../Modal/ModalPre";
 
-import { separadorMiles } from "../../utilidades/separadorMiles";
+import { separadorMiles } from "../../utilidades/Utilidades";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
 
 function ItemDetail({ juego }) {  
 
-  function onAdd() {
-    console.log("Agregar al carrito");
+  const [ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem ] = useContext(CartContext);
+
+  function onAdd() {    
+    addCart(juego, 1);    
   }
 
   return (

@@ -6,7 +6,13 @@
 }
 
 .cartContainer h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-family: 'Alata', sans-serif;
     color: #030C40;
+    margin-bottom: 15px;
+}
+
+.cartDetail_container {
+    margin-bottom: 10px;    
+    width: 70%;    
 }

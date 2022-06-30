@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { separadorMiles } from '../../utilidades/separadorMiles'
-import ItemCount from '../ItemCount/ItemCount'
+import { separadorMiles } from '../../utilidades/Utilidades'
 import './Item.css'
 
 function Item({ juego }) {    
