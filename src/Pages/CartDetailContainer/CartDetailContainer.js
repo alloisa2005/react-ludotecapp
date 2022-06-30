@@ -13,7 +13,7 @@ function CartDetailContainer() {
     <div className='cartContainer'>
 
         <div className='cartContainer_title'>
-          <h2>Mi Carrito ({cantidadItems()} items)</h2>    
+          <h2>Mi Carrito ({cantidadItems()} {cantidadItems() > 1 ? 'items' : 'item'})</h2>    
           <Link to={'/'} className="a_per"> <h4>Seguir Comprando</h4> </Link>
         </div>
         

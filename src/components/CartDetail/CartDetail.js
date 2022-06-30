@@ -11,9 +11,11 @@ function CartDetail({ item }) {
 
   return (
     <div className='cart_item_detail'>
-        <Link to={`/item/${item.id}`} className="a_per">
-            <img src={item.img} alt={item.nombre} />
-        </Link>
+        <div style={{ width:"25%"}}>
+            <Link to={`/item/${item.id}`} className="a_per">
+                <img src={item.img} alt={item.nombre} />
+            </Link>
+        </div>
         <div className="cart_item_detail_text">
             <h3>{item.nombre}</h3>
             <h4>Categoría: <span> { tituloMayuscula(item.categoria) } </span></h4>

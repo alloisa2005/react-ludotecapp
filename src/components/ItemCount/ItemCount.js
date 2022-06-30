@@ -39,7 +39,7 @@ function ItemCount({stock, initial, onAdd}) {
         <p className='itemCount_unidades'>Unidades disponibles: <span>{stock-count}</span></p>
         
         <div className="buttons_container">
-          <button onClick={onAdd} className='itemCount_btn_cart'>Agregar al Carrito</button>
+          <button onClick={ () => onAdd(count)} className='itemCount_btn_cart'>Agregar al Carrito</button>
           <Link to='/cart'>
             <button className='itemCount_btn_cart'>Ir al Carrito</button>
           </Link>

@@ -11,6 +11,10 @@ function CartContextProvider({ children }) {
   }
 
   function addCart(juego, quantity) {
+    if(quantity === 0){
+      return;
+    }
+
     let existe = isInCart(juego.id);
         
     if(existe) {
