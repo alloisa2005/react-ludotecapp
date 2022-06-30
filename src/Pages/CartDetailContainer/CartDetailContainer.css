@@ -8,13 +8,13 @@
 .cartContainer_title{
     display: flex;
     align-items: center;    
+    margin-bottom: 22px;
 }
 
 .cartContainer_title h2 {
     font-size: 2rem;
     font-family: 'Alata', sans-serif;
-    color: #030C40;
-    margin-bottom: 15px;
+    color: #030C40;    
     margin-right: 40px;
 }
 
@@ -26,6 +26,25 @@
 }
 
 .cartDetail_container {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;    
-    width: 70%;    
+    width: 100%;    
+}
+
+.cartDetail_container_left {
+    width: 65%;
+}
+
+.cartDetail_container_right {
+    background-color: white;
+    font-family: 'Alata', sans-serif;
+    width: 33%;
+    height: 70vh;
+    border: 1px solid #030C40;
+    border-radius: 10px;
+}
+
+.cartDetail_container_right h2{
+    text-align: center;
 }

@@ -18,10 +18,17 @@ function CartDetailContainer() {
         </div>
         
         <div className='cartDetail_container'>
-          {cartList.map( item => (          
-            <CartDetail item={ item } /> 
-          ))} 
-        </div>   
+          <div className='cartDetail_container_left'>
+            {cartList.map( item => (          
+              <CartDetail item={ item } /> 
+            ))} 
+          </div>
+
+          <div className='cartDetail_container_right'>
+            <h2>Resumen del Pedido</h2>
+          </div>
+
+        </div>         
     </div>
   )
 }
