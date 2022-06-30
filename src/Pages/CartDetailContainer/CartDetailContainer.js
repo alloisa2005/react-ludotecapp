@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import CartDetail from '../../components/CartDetail/CartDetail';
 import { CartContext } from '../../context/CartContext';
 
@@ -10,7 +11,12 @@ function CartDetailContainer() {
 
   return (
     <div className='cartContainer'>
-        <h2>Mi Carrito ({cantidadItems()} items)</h2>    
+
+        <div className='cartContainer_title'>
+          <h2>Mi Carrito ({cantidadItems()} items)</h2>    
+          <Link to={'/'} className="a_per"> <h4>Seguir Comprando</h4> </Link>
+        </div>
+        
         <div className='cartDetail_container'>
           {cartList.map( item => (          
             <CartDetail item={ item } /> 

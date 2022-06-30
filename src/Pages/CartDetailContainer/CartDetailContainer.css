@@ -5,11 +5,24 @@
     min-height: calc(100vh - 135px);    
 }
 
-.cartContainer h2 {
+.cartContainer_title{
+    display: flex;
+    align-items: center;    
+}
+
+.cartContainer_title h2 {
     font-size: 2rem;
     font-family: 'Alata', sans-serif;
     color: #030C40;
     margin-bottom: 15px;
+    margin-right: 40px;
+}
+
+.cartContainer_title h4 {    
+    font-family: 'Alata', sans-serif;        
+    color: #030C40;
+    font-size: 1.1rem;
+    text-decoration: underline;
 }
 
 .cartDetail_container {

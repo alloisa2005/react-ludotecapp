@@ -6,7 +6,8 @@ function CartContextProvider({ children }) {
   const [cartList, setCartList] = useState([]);
 
   function cantidadItems() {
-    return cartList.length;
+    //return cartList.length;
+    return cartList.reduce((total, item) => total + item.quantity, 0);
   }
 
   function addCart(juego, quantity) {
@@ -15,7 +16,7 @@ function CartContextProvider({ children }) {
     if(existe) {
       let itemCart = cartList.find(item => item.id === juego.id);
       itemCart.quantity += quantity;
-
+      setCartList([...cartList]);
     }else {
       setCartList([...cartList, {...juego, quantity}]);
     }
