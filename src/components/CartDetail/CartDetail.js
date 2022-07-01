@@ -19,7 +19,7 @@ function CartDetail({ item }) {
         <div className="cart_item_detail_text">
             <h3>{item.nombre}</h3>
             <h4>Categoría: <span> { tituloMayuscula(item.categoria) } </span></h4>
-            <h4>Precio Unitario: <span> { separadorMiles(item.precio) } </span></h4>
+            <h4>Precio Unitario: <span> $ { separadorMiles(item.precio) } </span></h4>
             <div className='cart_item_detail_cant'>
                 <div className="cant_detail">
                     <button>-</button>
