@@ -7,8 +7,8 @@ import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import Error from "./Pages/Error/Error";
-import CartDetailContainer from "./Pages/CartDetailContainer/CartDetailContainer";
 import CartContextProvider from "./context/CartContext";
+import Cart from "./Pages/Cart/Cart";
 
 function App() {  
 
@@ -23,7 +23,7 @@ function App() {
             <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
             <Route path="/category/:tipo" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
             <Route path="/item/:id" element={ <ItemDetailContainer /> } />          
-            <Route path="/cart" element={ <CartDetailContainer /> } />
+            <Route path="/cart" element={ <Cart /> } />
             <Route path="*" element={ <Error /> } />          
           </Routes>        
           

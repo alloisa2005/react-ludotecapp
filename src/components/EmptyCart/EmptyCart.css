@@ -1,0 +1,27 @@
+
+
+.empty_container {
+    width: 100%;    
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;    
+}
+
+.empty_container_img {
+    margin-top: 5px;
+}
+.empty_container_img img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+}
+
+.empty_container_cosas {
+    width: 100%;
+    text-align: center;
+}
+
+.empty_container_cosas h1 {
+    margin-bottom: 15px;
+}

@@ -1,26 +1,21 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import CartDetail from "../../components/CartDetail/CartDetail";
-import { CartContext } from "../../context/CartContext";
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
+import CartDetail from '../CartDetail/CartDetail';
+import './CartContainer.css'
 
-import "./CartDetailContainer.css";
+function CartContainer() {
 
-function CartDetailContainer() {
   const [cartList, setCartList, cantidadItems] = useContext(CartContext);
 
   return (
-    <div className="cartContainer">
-      {cartList.length === 0 ? (
-        <h2>No hay productos en el carrito</h2>
-      ) : (
-        <>
+    <>
           <div className="cartContainer_title">
             <h2>
               Mi Carrito ({cantidadItems()}{" "}
               {cantidadItems() > 1 ? "items" : "item"})
             </h2>
-            <Link to={"/"} className="a_per">
-              {" "}
+            <Link to={"/"} className="a_per">              
               <h4>Seguir Comprando</h4>{" "}
             </Link>
           </div>
@@ -37,9 +32,7 @@ function CartDetailContainer() {
             </div>
           </div>
         </>
-      )}
-    </div>
-  );
+  )
 }
 
-export default CartDetailContainer;
+export default CartContainer
