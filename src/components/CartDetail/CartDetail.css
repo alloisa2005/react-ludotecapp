@@ -17,6 +17,10 @@
     margin-right: 10px;
 }
 
+.cart_item_detail img:hover {
+    cursor: pointer;
+}
+
 .cart_item_detail_text {
     padding: 20px 10px;
     flex: 1;
