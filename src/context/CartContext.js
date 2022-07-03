@@ -46,12 +46,20 @@ function CartContextProvider({ children }) {
     return montoTotalCart() * 0.2;
   }
 
-  function envio() {    
+  function envio() {   
+    if( montoTotalCart() === 0 ) {
+      return 0;
+    }
+    
     return montoTotalCart() + iva() > 10000 ? 0 : 300;
   }
 
+  function total() {    
+    return montoTotalCart() + iva() + envio();
+  }
+
   return (
-    <CartContext.Provider value={[ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem, montoTotalCart, iva, envio ]}>
+    <CartContext.Provider value={[ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem, montoTotalCart, iva, envio, total ]}>
       {children}
     </CartContext.Provider>
   );

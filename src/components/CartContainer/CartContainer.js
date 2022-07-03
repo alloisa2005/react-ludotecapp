@@ -6,7 +6,7 @@ import CartDetail from "../CartDetail/CartDetail";
 import "./CartContainer.css";
 
 function CartContainer() {
-  const [cartList, setCartList, cantidadItems, clearCart, addCart, removeItem, montoTotalCart, iva, envio] = useContext(CartContext);
+  const [cartList, setCartList, cantidadItems, clearCart, addCart, removeItem, montoTotalCart, iva, envio, total ] = useContext(CartContext);
 
   return (
     <>
@@ -32,6 +32,7 @@ function CartContainer() {
           <h3>SubTotal ($): <span>{separadorMiles( montoTotalCart() )}</span></h3>
           <h3>IVA ($): <span>{separadorMiles( iva() )}</span></h3>
           <h3>Envío ($): <span>{separadorMiles( envio() )}</span></h3>
+          <h3>TOTAL ($): <span>{separadorMiles( total() )}</span></h3>
         </div>
       </div>
     </>
