@@ -44,7 +44,7 @@ function ItemDetail({ juego }) {
               Disponibilidad:
               <span> {juego.stock > 0 ? "Disponible" : "Sin stock"} </span>
             </p>
-            <p className="item_right_precio">$ {separadorMiles(juego.precio)}</p>            
+            <p className="item_right_precio">$ {separadorMiles(juego.precio)} <span className="item_right_precio_span">(no incluye IVA)</span></p>            
 
             {juego.categoria === 'accesorio' ? null :
               <div className="item_right_iconos">

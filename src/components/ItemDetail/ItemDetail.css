@@ -71,6 +71,13 @@
     font-weight: bold;    
 }
 
+.item_right_precio_span {    
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;    
+    color: grey;
+}
+
 .item_right_iconos{
     margin-top: 20px;
     display: flex;

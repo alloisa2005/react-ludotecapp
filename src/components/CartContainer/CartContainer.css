@@ -30,6 +30,7 @@
 }
 
 .cartDetail_container_right {
+    padding: 10px;
     background-color: white;    
     width: 33%;
     height: 70vh;
@@ -39,4 +40,5 @@
 
 .cartDetail_container_right h2{
     text-align: center;
+    font-size: 1.7rem;
 }

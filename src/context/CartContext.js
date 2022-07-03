@@ -35,15 +35,23 @@ function CartContextProvider({ children }) {
   }
 
   function isInCart(id){
-    let existe = cartList.find(item => item.id === id);
-    if(existe){
-      return true;
-    }else {
-      return false;
-    }
+    return cartList.some(item => item.id === id);   
   }
+  
+  function montoTotalCart() {    
+    return cartList.reduce((total, item) => total + (item.quantity*item.precio), 0);
+  }
+
+  function iva() {    
+    return montoTotalCart() * 0.2;
+  }
+
+  function envio() {    
+    return montoTotalCart() + iva() > 10000 ? 0 : 300;
+  }
+
   return (
-    <CartContext.Provider value={[ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem ]}>
+    <CartContext.Provider value={[ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem, montoTotalCart, iva, envio ]}>
       {children}
     </CartContext.Provider>
   );
