@@ -141,6 +141,38 @@ export const listaJuegos = [
     jug_max: "4",
     tiempo: "75'", 
     edad: "+13"   
+  },
+  {
+    id: 10,
+    nombre: "Glass Road",
+    categoria: "tablero",
+    descripcion: "Hoy en día, la Ruta del vidrio conecta museos, fábricas de vidrio históricas y diferentes lugares relacionados con el vidrio. Viaja por este camino de más de 241 km a través de la historia de la producción de vidrio. Ahora podrás disfrutar de una tradición de más de 700 años de manufactura de cristal en los bosques bávaros. Deberás gestionar habilidosamente tu producción de cristal y ladrillo para así construir las estructuras que te permitan que tu negocio prospere.",
+    img: "https://www.planetongames.com/26669-large_default/glass-road.jpg",
+    img_portada: "https://misutmeeple.com/wp-content/uploads/2021/11/glass_road_detalle_personajes_2.jpg",
+    yt: "2bDVH9Bvg4g",
+    precio: 3000,
+    stock: 4,
+    editor: "Maldito Games",
+    jug_min: "2",
+    jug_max: "4",
+    tiempo: "90'", 
+    edad: "+12"   
+  },
+  {
+    id: 11,
+    nombre: "Friday",
+    categoria: "carta",
+    descripcion: "Friday es un juego de cartas en solitario de tipo deck building. Robinson Crusoe ha llegado a nuestra isla y nosotros, encarnando al personaje Viernes, tenemos que ayudarle a defenderse de los peligros de la isla que, con suerte, desembocarán en dos combates contra unos piratas. Si les vencemos habremos ganado la partida, pero no va a resultar nada fácil.",
+    img: "http://1.bp.blogspot.com/-BRhlzCn7I2Y/T2zVEUo1uFI/AAAAAAAAAuE/wvbkGVEyMEY/s1600/Caratula_Friday.jpg",
+    img_portada: "https://maderaytroquel.com/wp-content/uploads/2020/05/WhatsApp-Image-2020-05-06-at-18.47.17-1-1536x864.jpeg",
+    yt: "WOkyfbYWo2s",
+    precio: 1600,
+    stock: 6,
+    editor: "Maldito Games",
+    jug_min: "1",
+    jug_max: "1",
+    tiempo: "45'", 
+    edad: "+12"   
   }
 ];
 
