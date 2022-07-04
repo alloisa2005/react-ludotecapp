@@ -27,6 +27,13 @@
     margin: 0 15px;
 }
 
+.itemCount_controles_button:hover {
+    background-color: #fff;
+    color: #030C40;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
 .itemCount_controles p {
     font-size: 1.7rem;
     font-weight: bold;
@@ -61,6 +68,13 @@
     color: white;
     border: 1px solid #030C40;
     cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.itemCount_btn_cart:hover {
+    background-color: white;
+    color: #030C40;
+    border: 1px solid #030C40;
 }
 
 .itemCount_unidades {

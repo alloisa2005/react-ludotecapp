@@ -75,7 +75,7 @@ function ItemDetail({ juego }) {
 
             <div className="icon_envio">
               <LocalShippingIcon className="icon_div_icon" />
-              <p>Envío Gratis</p>
+              <p>Envíos a domicilio</p>
             </div>
           </div>
         </div>
