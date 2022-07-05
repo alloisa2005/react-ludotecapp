@@ -62,9 +62,9 @@ function CartContainer() {
           </div>       
 
           <div className="botones_container">
-            <button className="botones_container_btn btn_blue">Finalizar Compra</button>
+            <button className="botones_container_btn btn_blue">Finalizar compra</button>
             <Link to={'/'}>
-              <button className="botones_container_btn btn_white">Seguir Comprando</button>
+              <button className="botones_container_btn btn_white">Seguir comprando</button>
             </Link>            
           </div>          
 
