@@ -14,7 +14,7 @@ function EmptyCart() {
         <div className='empty_container_cosas'>
           <h1>Carrito Vacío</h1>
           <Link to='/'>
-            <button className='itemCount_btn_cart'>Inicio</button>
+            <button className='itemCount_btn_cart'>Buscar Juegos</button>
           </Link>
         </div>
     </div>
