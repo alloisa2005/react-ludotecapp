@@ -1,6 +1,6 @@
 
 import { db } from "./firebaseConfig";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs, doc, getDoc } from "firebase/firestore";
 
 export const getAllJuegos = async (tipo = undefined) => {
 
@@ -24,3 +24,14 @@ export const getAllJuegos = async (tipo = undefined) => {
 }
 
 
+export const getJuegosXId = async (id) => {
+
+  const docRef = doc(db, "juegos", id);
+  const docSnap = await getDoc(docRef); 
+
+  if (docSnap.exists()) {
+    return {...docSnap.data(), id:id};
+  } 
+
+  return {};
+}

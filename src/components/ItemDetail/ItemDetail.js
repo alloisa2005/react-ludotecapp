@@ -19,7 +19,7 @@ function ItemDetail({ juego }) {
 
   const [ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem ] = useContext(CartContext);
 
-  function onAdd(cant) {    
+  function onAdd(cant) {      
     addCart(juego, cant);    
   }
 
