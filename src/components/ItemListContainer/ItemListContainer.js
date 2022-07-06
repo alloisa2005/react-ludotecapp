@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 import CircularProgress from "@mui/material/CircularProgress";
-import { getJuegos, getJuegosPorCategoria  } from "../../data/juegos";
 import { useParams } from "react-router-dom";
 
 import { getAllJuegos } from "../../firebase/firebaseFunciones";
@@ -16,7 +15,7 @@ function ItemListContainer({ greeting }) {
 
   useEffect(() => {    
     setIsLoading(true);    
-    getAllJuegos()
+    getAllJuegos(tipo)
       .then(juegos => {
         setJuegos(juegos);
         setIsLoading(false);

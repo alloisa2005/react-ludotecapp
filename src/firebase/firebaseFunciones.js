@@ -1,10 +1,16 @@
 
 import { db } from "./firebaseConfig";
-import { collection, query, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
-export const getAllJuegos = async (tipo = '') => {
+export const getAllJuegos = async (tipo = undefined) => {
 
-    const q = query(collection(db, "juegos"));
+    let q = null;
+
+    if(tipo === undefined){
+      q = query(collection(db, "juegos"));
+    }else{
+      q = query(collection(db, "juegos"), where("categoria", "==", tipo));
+    }
 
     const querySnapshot = await getDocs(q);
 
