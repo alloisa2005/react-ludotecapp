@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./ItemListContainer.css";
-
-
 import ItemList from "../ItemList/ItemList";
-
 import CircularProgress from "@mui/material/CircularProgress";
-import {  
-  getJuegos,  
-  getJuegosPorCategoria  
-} from "../../data/juegos";
+import { getJuegos, getJuegosPorCategoria  } from "../../data/juegos";
 import { useParams } from "react-router-dom";
+
+import { getAllJuegos } from "../../firebase/firebaseFunciones";
 
 function ItemListContainer({ greeting }) {  
 
@@ -19,24 +15,14 @@ function ItemListContainer({ greeting }) {
   let { tipo } = useParams();
 
   useEffect(() => {    
-    setIsLoading(true);
-    filtrarJuegos(tipo);  
+    setIsLoading(true);    
+    getAllJuegos()
+      .then(juegos => {
+        setJuegos(juegos);
+        setIsLoading(false);
+      });    
   }, [tipo]);    
-
-  function filtrarJuegos(tipo) {
-    if (tipo === undefined) {
-      getJuegos().then((res) => {
-        setJuegos(res);  
-        setIsLoading(false);      
-      });
-    } else{
-      getJuegosPorCategoria(tipo)
-        .then((res) => {
-          setJuegos(res);
-          setIsLoading(false);
-        });
-    }
-  };
+  
 
   return (
     <section className="item_list_container">
@@ -58,3 +44,23 @@ function ItemListContainer({ greeting }) {
 }
 
 export default ItemListContainer;
+
+
+
+/* Cosas Viejas que quité por FIREBASE
+
+function filtrarJuegos(tipo) {
+  if (tipo === undefined) {
+    getJuegos().then((res) => {
+      setJuegos(res);  
+      setIsLoading(false);      
+    });
+  } else{
+    getJuegosPorCategoria(tipo)
+      .then((res) => {
+        setJuegos(res);
+        setIsLoading(false);
+      });
+  }
+};
+ */
