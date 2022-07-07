@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-
 import { useParams } from "react-router-dom";
-import { getProductoById } from "../../data/juegos";
 import { CircularProgress } from "@mui/material";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 

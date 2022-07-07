@@ -2,6 +2,7 @@ import React from 'react'
 import './EmptyCart.css'
 import emptyCart from '../../images/emptyCart.png'
 import { Link } from 'react-router-dom'
+import { TextField } from '@mui/material'
 
 
 function EmptyCart() {
@@ -15,8 +16,9 @@ function EmptyCart() {
           <h1>Carrito Vacío</h1>
           <Link to='/'>
             <button className='itemCount_btn_cart'>Inicio</button>
-          </Link>
-        </div>
+          </Link>          
+        </div>                
+
     </div>
   )
 }
