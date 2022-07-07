@@ -10,17 +10,19 @@ import Error from "./Pages/Error/Error";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./Pages/Cart/Cart";
 
+
 function App() {  
 
   return (
     <Router>      
 
       <CartContextProvider>
+
         <div className="App">
           <NavBar />        
 
-          <Routes>
-            <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
+          <Routes>            
+            <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } /> 
             <Route path="/category/:tipo" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
             <Route path="/item/:id" element={ <ItemDetailContainer /> } />          
             <Route path="/cart" element={ <Cart /> } />
@@ -29,6 +31,7 @@ function App() {
           
           <Footer />
         </div>
+
       </CartContextProvider>
       
     </Router>
