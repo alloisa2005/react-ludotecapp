@@ -13,14 +13,21 @@ import ModalPre from "../Modal/ModalPre";
 
 import { separadorMiles } from "../../utilidades/Utilidades";
 import { CartContext } from "../../context/CartContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { updateStockJuego } from "../../firebase/firebaseFunciones";
 
 function ItemDetail({ juego }) {  
+
+  const [stockJuego, setStockJuego] = useState(juego.stock);
 
   const [ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem ] = useContext(CartContext);
 
   function onAdd(cant) {      
     addCart(juego, cant);    
+
+    // Cuando se agregan juegos al carro actualizo el stock
+    updateStockJuego(juego.id, (juego.stock - cant));
+    setStockJuego(juego.stock - cant);
   }
 
   return (
@@ -69,7 +76,7 @@ function ItemDetail({ juego }) {
 
             <div className="division"></div>
 
-            <ItemCount stock={juego.stock} initial={1} onAdd={onAdd}  />            
+            <ItemCount stock={stockJuego} initial={0} onAdd={onAdd}  />            
 
             <div className="division"></div>
 

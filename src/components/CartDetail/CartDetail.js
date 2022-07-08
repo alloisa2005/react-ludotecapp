@@ -1,24 +1,40 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { separadorMiles, tituloMayuscula } from "../../utilidades/Utilidades";
 import "./CartDetail.css";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import { getJuegosXId, updateStockJuego } from "../../firebase/firebaseFunciones";
 
 function CartDetail({ item }) {
   const [cartList, setCartList, cantidadItems, clearCart, addCart, removeItem] =
     useContext(CartContext);
 
+  const [stockJuego, setStockJuego] = useState(item.stock); 
+  
+  useEffect(() => {
+    // Cuando el componente se monta, obtengo el juego de la base de datos (el stock) y lo guardo en el state stockJuego
+    getJuegosXId(item.id).then(juego => setStockJuego(juego.stock));          
+  },[])
+
   const sumarItem = () => {
     // Añado items mientras haya en stock de ese producto
-    if (item.stock > item.quantity) {
+    if (stockJuego > item.quantity) {
       addCart(item, 1);
+      
+      // Actualizo el stock del juego en la base de datos
+      updateStockJuego(item.id, (stockJuego - 1));
+      setStockJuego( stockJuego - 1 );
     }
   };
 
   const restarItem = () => {
     if (item.quantity > 0) {
       addCart(item, -1);
+      
+      // Actualizo el stock del juego en la base de datos
+      updateStockJuego(item.id, (stockJuego + 1));
+      setStockJuego( stockJuego + 1 );
     }
   };
 
@@ -47,6 +63,7 @@ function CartDetail({ item }) {
             className="cant_detail_icon"
             onClick={() => removeItem(item.id)}
           />
+          <p>{stockJuego}</p>
         </div>
       </div>
       <h3 className="cart_item_price">

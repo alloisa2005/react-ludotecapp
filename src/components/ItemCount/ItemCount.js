@@ -22,6 +22,11 @@ function ItemCount({ stock, initial, onAdd }) {
     }
   }
 
+  function handleClick() {
+    onAdd(count);
+    setCount(0);
+  }
+
   useEffect(() => {
     count === stock ? setBtnIncrement(true) : setBtnIncrement(false);
 
@@ -52,7 +57,7 @@ function ItemCount({ stock, initial, onAdd }) {
       </p>
 
       <div className="buttons_container">
-        <button onClick={() => onAdd(count)} className="itemCount_btn_cart">
+        <button onClick={handleClick} className="itemCount_btn_cart">
           Agregar al Carrito
         </button>
 

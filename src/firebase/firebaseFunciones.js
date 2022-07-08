@@ -32,7 +32,7 @@ export const getJuegosXId = async (id) => {
   return {};
 };
 
-export const updateStockJuego = async (id, stock) => {
+export const updateStockJuego = async (id, stock) => {  
 
   const juego = doc(db, "juegos", id);
 
@@ -40,7 +40,7 @@ export const updateStockJuego = async (id, stock) => {
   await updateDoc(juego, {
     stock: stock
   });
-
+    
 };
 
 export const agregarCompra = async (buyer, items, date, total) => {
