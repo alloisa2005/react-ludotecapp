@@ -9,6 +9,7 @@ import Acordeon from './Acordeon';
 
 import './FormCompra.css'
 import { agregarCompra } from '../../firebase/firebaseFunciones';
+import { Alert, CircularProgress } from '@mui/material';
 
 const initialState = {
   name: '',
@@ -22,6 +23,8 @@ export default function FormCompra() {
 
   const [open, setOpen] = useState(false);
   const [values, setValues] = useState(initialState);
+  const [cargando, setCargando] = useState(false);
+  const [alerta, setAlerta] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -36,11 +39,18 @@ export default function FormCompra() {
   }
 
   const handleConfirmar = () => {
+    if(values.address === '' || values.name === '' || values.email === ''){
+      setAlerta(true);
+      return;
+    }
+
+    setCargando(true);
     let hoy = new Date();
     agregarCompra(values, cartList, hoy, total())
       .then( id => {
         console.log('ID: ',id);
         setValues(initialState);
+        setCargando(false);
         handleClose();
       });        
   }
@@ -56,6 +66,7 @@ export default function FormCompra() {
         <DialogContent>          
           <TextField
             autoFocus
+            onFocus={() => setAlerta(false)}
             margin="dense" 
             id="name"
             name='name'
@@ -67,6 +78,7 @@ export default function FormCompra() {
           />
           <TextField
             autoFocus
+            onFocus={() => setAlerta(false)}
             margin="dense" 
             id="address"
             name='address'
@@ -78,6 +90,7 @@ export default function FormCompra() {
           />
           <TextField
             autoFocus
+            onFocus={() => setAlerta(false)}
             margin="dense" 
             id="telephone"
             name='telephone'
@@ -89,6 +102,7 @@ export default function FormCompra() {
           />
           <TextField
             autoFocus
+            onFocus={() => setAlerta(false)}
             margin="dense"
             id="email"
             name='email'
@@ -108,8 +122,13 @@ export default function FormCompra() {
 
         <DialogActions>
           <button className='botones_container_btn btn_white' onClick={handleClose}>CANCELAR</button>
-          <button className='botones_container_btn btn_blue' onClick={handleConfirmar}>CONFIRMAR</button>          
+          <button className='botones_container_btn btn_blue' onClick={handleConfirmar} disabled={cargando}>
+            {cargando ? <CircularProgress className='compra_loading'/> : 'CONFIRMAR'}
+          </button>                    
         </DialogActions>
+        {
+          alerta ? <Alert severity="error">Nombre, Dirección y Email son datos obligatorios</Alert> : null
+        }
       </Dialog>      
     </div>
   );

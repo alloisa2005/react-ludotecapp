@@ -3,3 +3,11 @@
     font-size: 2rem;
     font-family: 'Anek Latin', sans-serif;
 }
+
+
+.compra_loading {
+    height: 20px!important;
+    width: 20px!important;
+    margin: 0 auto;
+    color: white!important;
+}
