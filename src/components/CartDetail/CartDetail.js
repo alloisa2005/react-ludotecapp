@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 import { getJuegosXId, updateStockJuego } from "../../firebase/firebaseFunciones";
 
 function CartDetail({ item }) {
-  const [cartList, setCartList, cantidadItems, clearCart, addCart, removeItem] =
-    useContext(CartContext);
+  const { addCart, removeItem } = useContext(CartContext);
 
   const [stockJuego, setStockJuego] = useState(item.stock); 
   

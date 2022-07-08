@@ -21,16 +21,16 @@ export const getAllJuegos = async (tipo = undefined) => {
   return juegos;
 };
 
-export const getJuegosXId = async (id) => {
-  const docRef = doc(db, "juegos", id);
-  const docSnap = await getDoc(docRef);
+  export const getJuegosXId = async (id) => {
+    const docRef = doc(db, "juegos", id);
+    const docSnap = await getDoc(docRef);
 
-  if (docSnap.exists()) {
-    return { ...docSnap.data(), id: id };
-  }
+    if (docSnap.exists()) {
+      return { ...docSnap.data(), id: id };
+    }
 
-  return {};
-};
+    return {};
+  };
 
 export const updateStockJuego = async (id, stock) => {  
 

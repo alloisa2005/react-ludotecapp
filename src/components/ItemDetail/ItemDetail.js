@@ -20,7 +20,7 @@ function ItemDetail({ juego }) {
 
   const [stockJuego, setStockJuego] = useState(juego.stock);
 
-  const [ cartList, setCartList, cantidadItems, clearCart, addCart, removeItem ] = useContext(CartContext);
+  const { addCart } = useContext(CartContext);
 
   function onAdd(cant) {      
     addCart(juego, cant);    

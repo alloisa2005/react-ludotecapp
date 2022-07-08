@@ -9,9 +9,9 @@ function ItemCount({ stock, initial, onAdd }) {
   const [btnIncrement, setBtnIncrement] = useState(false);
   const [btnDecrement, setBtnDecrement] = useState(true);
 
-  const [cartList, setCartList, cantidadItems] = useContext(CartContext);
+  const { cantidadItems } = useContext(CartContext);
 
-  function restar() {
+  function restar() { 
     if (count > 0) {
       setCount(count - 1);
     }

@@ -12,7 +12,7 @@ import { CartContext } from "../../context/CartContext";
 
 function NavBar() {   
 
-  const [ cartList, setCartList, cantidadItems ] = useContext(CartContext);
+  const { cantidadItems } = useContext(CartContext);
 
   return (    
     <header className="header"> 

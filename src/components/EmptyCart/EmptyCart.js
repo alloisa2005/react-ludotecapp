@@ -5,14 +5,7 @@ import { Link } from 'react-router-dom'
 import { TextField } from '@mui/material'
 
 
-function EmptyCart() {
-
-  const [nombre, setNombre] = useState('');
-
-  const nombreRef = useRef('');
-  const changeName = () => {
-    setNombre(nombreRef.current.value);
-  }
+function EmptyCart() {  
 
   return (
     <div className='empty_container'>

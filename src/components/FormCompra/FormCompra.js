@@ -19,7 +19,7 @@ const initialState = {
 }
 
 export default function FormCompra() {
-  const [cartList, setCartList, cantidadItems, clearCart, addCart, removeItem, montoTotalCart, iva, envio, total ] = useContext(CartContext);
+  const { cartList, total } = useContext(CartContext);
 
   const [open, setOpen] = useState(false);
   const [values, setValues] = useState(initialState);
@@ -47,8 +47,7 @@ export default function FormCompra() {
     setCargando(true);
     let hoy = new Date();
     agregarCompra(values, cartList, hoy, total())
-      .then( id => {
-        console.log('ID: ',id);
+      .then( id => {        
         setValues(initialState);
         setCargando(false);
         handleClose();

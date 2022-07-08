@@ -11,7 +11,7 @@ import diners from '../../images/diners_logo.jpg'
 import FormCompra from "../FormCompra/FormCompra";
 
 function CartContainer() {
-  const [cartList, setCartList, cantidadItems, clearCart, addCart, removeItem, montoTotalCart, iva, envio, total ] = useContext(CartContext);
+  const { cartList, cantidadItems, montoTotalCart, iva, envio, total } = useContext(CartContext);
 
   return (
     <>

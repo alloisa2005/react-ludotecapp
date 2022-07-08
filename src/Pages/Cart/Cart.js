@@ -7,7 +7,7 @@ import { CartContext } from "../../context/CartContext";
 import "./Cart.css";
 
 function Cart() {
-  const [cartList, setCartList, cantidadItems] = useContext(CartContext);
+  const { cartList } = useContext(CartContext);
 
   return (
     <div className="cartContainer">
