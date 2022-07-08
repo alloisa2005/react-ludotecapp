@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./ItemListContainer.css";
-import ItemList from "../ItemList/ItemList";
-import CircularProgress from "@mui/material/CircularProgress";
-import { useParams } from "react-router-dom";
 
+import ItemList from "../ItemList/ItemList";
+import Spinner from "../Spinner/Spinner";
+
+import { useParams } from "react-router-dom";
 import { getAllJuegos } from "../../firebase/firebaseFunciones";
+
 
 function ItemListContainer({ greeting }) {  
 
@@ -31,10 +33,7 @@ function ItemListContainer({ greeting }) {
       {/* <ItemCount stock={stock} initial={initial} onAdd={onAdd} /> */}
 
       {isLoading ? (
-        <div className="loading_div">
-          <CircularProgress className="loading" color="inherit" />
-          <h3>Cargando...</h3>
-        </div>
+        <Spinner />        
       ) : (
         <ItemList juegos={juegos} />
       )}

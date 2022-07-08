@@ -4,6 +4,7 @@ import { CircularProgress } from "@mui/material";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 
 import { getJuegosXId } from "../../firebase/firebaseFunciones";
+import Spinner from "../../components/Spinner/Spinner";
 
 
 function ItemDetailContainer() {
@@ -25,9 +26,7 @@ function ItemDetailContainer() {
   return (
     <div>
       {isLoading ? (
-        <div className="loading_div" style={{ display: "grid", placeItems: "center" }}>
-          <CircularProgress className="loading" color="inherit" />          
-        </div>
+        <Spinner />
       ) : (
         <ItemDetail juego={juego} />
       )}
