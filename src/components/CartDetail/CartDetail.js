@@ -38,6 +38,11 @@ function CartDetail({ item }) {
     }
   };
 
+  function handlerDeleteBtn(){    
+    updateStockJuego(item.id, (item.quantity + stockJuego));    
+    removeItem(item.id);
+  }
+
   return (
     <div className="cart_item_detail">
       <div style={{ width: "25%" }}>
@@ -61,7 +66,7 @@ function CartDetail({ item }) {
           </div>
           <DeleteOutlinedIcon
             className="cant_detail_icon"
-            onClick={() => removeItem(item.id)}
+            onClick={handlerDeleteBtn}
           />
           <p>{stockJuego}</p>
         </div>
