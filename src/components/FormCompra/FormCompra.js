@@ -8,6 +8,7 @@ import { CartContext } from '../../context/CartContext';
 import Acordeon from './Acordeon';
 
 import './FormCompra.css'
+import { agregarCompra } from '../../firebase/firebaseFunciones';
 
 const initialState = {
   name: '',
@@ -35,9 +36,13 @@ export default function FormCompra() {
   }
 
   const handleConfirmar = () => {
-    console.log(values);
-    setValues(initialState);
-    //handleClose();
+    let hoy = new Date();
+    agregarCompra(values, cartList, hoy, total())
+      .then( id => {
+        console.log('ID: ',id);
+        setValues(initialState);
+        handleClose();
+      });        
   }
 
   return (
