@@ -35,3 +35,7 @@ export const getJuegosXId = async (id) => {
 
   return {};
 }
+
+export const updateStockJuego = async (id, stock) => {}
+
+export const agregarCompra = async (id, stock) => {}
