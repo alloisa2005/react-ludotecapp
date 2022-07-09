@@ -1,7 +1,7 @@
 
 .formCompra_titulo {
     font-size: 2rem;
-    font-family: 'Anek Latin', sans-serif;
+    font-family: 'Anek Latin', sans-serif!important;
 }
 
 
@@ -10,6 +10,15 @@
     width: 20px!important;
     margin: 0 auto;
     color: white!important;
+}
+
+.alerta_ok {
+    height: 100px!important;
+    padding: 10px!important;    
+}
+
+.alerta_ok span {
+    font-size: 1.3rem!important;
 }
 
 .btn_oculto{

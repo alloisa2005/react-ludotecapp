@@ -80,8 +80,8 @@ export default function FormCompra() {
           </Alert>
         ) : null}
         {idCompra !== ''? (
-          <Alert variant="filled" severity="success">
-            Compra realizada con éxito, su ID de compra es: {idCompra}
+          <Alert variant="filled" severity="success" className="alerta_ok">
+            Compra realizada con éxito, su ID de compra es: <span>{idCompra}</span>
           </Alert>
         ) : null}
         <DialogContent>

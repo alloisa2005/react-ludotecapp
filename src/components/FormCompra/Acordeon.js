@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { CartContext } from '../../context/CartContext';
 import { separadorMiles } from '../../utilidades/Utilidades';
+import './FormCompra.css'
+
+
 export default function Acordeon() {
 
   const { cartList, total, montoTotalCart, iva, envio } = useContext(CartContext);
