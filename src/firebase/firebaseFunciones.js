@@ -43,14 +43,25 @@ export const updateStockJuego = async (id, stock) => {
     
 };
 
-export const agregarCompra = async (buyer, items, date, total) => {
-  // Add a new document with a generated id.
-  const docRef = await addDoc(collection(db, "compras"), {
-    buyer,
-    items,
-    date,
-    total,
-  });
+export const agregarCompra = async (buyer, items, total) => {
+
+  let date = new Date();
+
+  const docRef = await addDoc(collection(db, "compras"), { buyer, items, date, total });
 
   return docRef.id;
+};
+
+export const getAllCompras = async () => {
+  let q = query(collection(db, "compras"));  
+
+  const querySnapshot = await getDocs(q);
+
+  let compras = [];
+
+  querySnapshot.forEach((doc) => {
+    compras.push({ ...doc.data(), id: doc.id });
+  });
+
+  return compras;
 };

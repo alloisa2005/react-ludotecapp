@@ -1,0 +1,27 @@
+
+.compras_container {
+    width: 90%;
+    margin: 15px auto;
+    min-height: calc(100vh - 135px);    
+    font-family: 'Alata', sans-serif;
+}
+
+.compras_container h2 {
+    font-size: 2rem;
+}
+
+.compras_filtros {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.compras_listado{
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 12px;
+}

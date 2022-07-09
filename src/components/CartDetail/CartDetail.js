@@ -18,13 +18,13 @@ function CartDetail({ item }) {
 
   const sumarItem = () => {
     // Añado items mientras haya en stock de ese producto
-    if (stockJuego > item.quantity) {
+    if (stockJuego > 0 ) {  /* item.quantity */
       addCart(item, 1);
       
       // Actualizo el stock del juego en la base de datos
       updateStockJuego(item.id, (stockJuego - 1));
       setStockJuego( stockJuego - 1 );
-    }
+    }    
   };
 
   const restarItem = () => {
@@ -40,7 +40,7 @@ function CartDetail({ item }) {
   function handlerDeleteBtn(){    
     updateStockJuego(item.id, (item.quantity + stockJuego));    
     removeItem(item.id);
-  }
+  }  
 
   return (
     <div className="cart_item_detail">
@@ -63,11 +63,11 @@ function CartDetail({ item }) {
             <p>{item.quantity}</p>
             <button onClick={sumarItem}>+</button>
           </div>
-          <DeleteOutlinedIcon
+          <DeleteOutlinedIcon style={{marginRight:17}}
             className="cant_detail_icon"
             onClick={handlerDeleteBtn}
           />
-          <p>{stockJuego}</p>
+          <p>Stock: {stockJuego} {stockJuego > 1 ? 'uds.':'ud.'}</p>
         </div>
       </div>
       <h3 className="cart_item_price">

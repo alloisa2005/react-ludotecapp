@@ -1,0 +1,19 @@
+
+.compras_noItem {    
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.compras_noItem img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+}
+
+.compras_noItem h1 {
+    margin: 15px 0;
+}

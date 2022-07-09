@@ -11,3 +11,7 @@
     margin: 0 auto;
     color: white!important;
 }
+
+.btn_oculto{
+    display: none;
+}
