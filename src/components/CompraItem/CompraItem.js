@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { separadorMiles, transformarFecha } from "../../utilidades/Utilidades";
 import './CompraItem.css'
 
@@ -14,7 +15,7 @@ function CompraItem({ compra }) {
         {
           compra.items.map( (item,index) => (
             <div key={item.id} className="compra_card">
-              <img src={item.img} alt={item.name} />
+              <Link to={`/item/${item.id}`}> <img src={item.img} alt={item.name} /> </Link>
               <p>{ item.title }</p>
               <p>Cantidad: { item.quantity }</p>
               <p>Monto ($): { separadorMiles( item.quantity * item.price ) }</p>              
