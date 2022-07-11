@@ -1,5 +1,5 @@
 import { db } from "./firebaseConfig";
-import {  collection,  query,  where,  getDocs,  doc,  getDoc,  addDoc, updateDoc  } from "firebase/firestore";
+import {  collection,  query,  where,  getDocs,  doc,  getDoc,  addDoc, updateDoc, orderBy  } from "firebase/firestore";
 
 export const getAllJuegos = async (tipo = undefined) => {
   let q = null;
@@ -53,7 +53,7 @@ export const agregarCompra = async (buyer, items, total) => {
 };
 
 export const getAllCompras = async () => {
-  let q = query(collection(db, "compras"));  
+  let q = query(collection(db, "compras"), orderBy("date","desc"));  
 
   const querySnapshot = await getDocs(q);
 
