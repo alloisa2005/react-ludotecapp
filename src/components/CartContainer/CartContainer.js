@@ -9,6 +9,7 @@ import mastercard from '../../images/mastercard_logo.png'
 import american from '../../images/american_logo.png'
 import diners from '../../images/diners_logo.jpg'
 import FormCompra from "../FormCompra/FormCompra";
+import NoProductModal from "../NoProductModal/NoProductModal";
 
 function CartContainer() {
   const { cartList, cantidadItems, montoTotalCart, iva, envio, total } = useContext(CartContext);
@@ -62,9 +63,11 @@ function CartContainer() {
             <img src={diners} alt="Diners Logo" />
           </div>       
 
-          <div className="botones_container">            
-            <FormCompra />  {/* Llamo al formulario de compra (un modal) */}
-
+          <div className="botones_container">     
+            { /* Llamo al formulario de compra (un modal) */
+              cantidadItems() > 0 ? <FormCompra /> : <NoProductModal />
+            }                   
+            
             <Link to={'/'}>
               <button className="botones_container_btn btn_white">Seguir comprando</button>
             </Link>            
