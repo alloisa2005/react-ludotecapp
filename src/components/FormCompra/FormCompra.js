@@ -51,7 +51,7 @@ export default function FormCompra() {
     setCargando(true);
     
     let items = [];
-    cartList.forEach((item) => items.push({ id: item.id, title: item.nombre, price: item.precio, quantity: item.quantity }));
+    cartList.forEach((item) => items.push({ id: item.id, title: item.nombre, price: item.precio, quantity: item.quantity, img: item.img }));
     let total = {subtotal: montoTotalCart(), iva: iva(), envio: envio(), total: montoTotalCart() + iva() + envio()};
 
     agregarCompra(values, items, total).then((id) => {

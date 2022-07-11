@@ -29,7 +29,7 @@ function NavBar() {
           <Link to={ "/category/carta" } className="li_item">Juegos de Cartas</Link>
           <Link to={ "/category/tablero" } className="li_item">Juegos de Tablero</Link>          
           <Link to={ "/category/accesorio" } className="li_item">Accesorios</Link>                    
-          {/* <Link to={ "/compras" } className="li_item">Mis Compras</Link>   */}
+          <Link to={ "/compras" } className="li_item">Mis Compras</Link> 
 
           {
             // Si la cantidad de elementos en el carrito es nula, oculto el icono del carrito

@@ -1,0 +1,40 @@
+
+.compra_item{
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 20px 25px;
+}
+
+.compra_total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.compra_total span {
+    font-size: 1.2rem;
+    color: #030C40;
+}
+
+.compra_total_total {
+    font-size: 1.2rem;
+    color: #030C40;
+}
+
+.compra_card {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.compra_card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 20px;
+}
