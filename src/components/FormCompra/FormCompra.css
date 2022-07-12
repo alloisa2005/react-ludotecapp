@@ -14,11 +14,13 @@
 
 .alerta_ok {
     height: 100px!important;
-    padding: 10px!important;    
+    padding: 10px!important;   
+    text-align: center!important;; 
 }
 
 .alerta_ok span {
-    font-size: 1.3rem!important;
+    text-align: center;
+    font-size: 1.7rem!important;
 }
 
 .btn_oculto{
