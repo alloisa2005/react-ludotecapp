@@ -16,9 +16,9 @@ function CompraItem({ compra }) {
           compra.items.map( (item,index) => (
             <div key={item.id} className="compra_card">
               <Link to={`/item/${item.id}`}> <img src={item.img} alt={item.name} /> </Link>
-              <p>{ item.title }</p>
-              <p>Cantidad: { item.quantity }</p>
-              <p>Monto ($): { separadorMiles( item.quantity * item.price ) }</p>              
+              <p className="compra_card_p">{ item.title }</p>
+              <p className="compra_card_p">Cantidad: { item.quantity }</p>
+              <p style={{fontSize:"1.1rem"}}>Monto ($): { separadorMiles( item.quantity * item.price ) }</p>              
             </div>
           ))
         }
