@@ -52,8 +52,12 @@ export const agregarCompra = async (buyer, items, total) => {
   return docRef.id;
 };
 
-export const getAllCompras = async () => {
-  let q = query(collection(db, "compras"), orderBy("date","desc"));  
+export const getAllCompras = async (filtroFecha) => {
+  let q = query(collection(db, "compras"), orderBy("date"));
+
+  if (filtroFecha === "D") {
+    q = query(collection(db, "compras"), orderBy("date", "desc"));
+  }
 
   const querySnapshot = await getDocs(q);
 

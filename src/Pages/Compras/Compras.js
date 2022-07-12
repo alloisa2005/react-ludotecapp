@@ -5,16 +5,22 @@ import { getAllCompras } from "../../firebase/firebaseFunciones";
 import Spinner from "../../components/Spinner/Spinner";
 import CompraItem from "../../components/CompraItem/CompraItem";
 
+
 function Compras() {
   const [compras, setCompras] = useState([]);
   const [cargando, setCargando] = useState(true);
+  const [filtroFecha, setFiltroFecha] = useState('D');  // Inicializo en "D"escendente  
 
-  useEffect(() => {
-    getAllCompras().then((res) => {
+  const handlerChange = (e) => {    
+    setFiltroFecha(e.target.value);
+  }
+
+  useEffect(() => {    
+    getAllCompras(filtroFecha).then((res) => {
       setCompras(res);
       setCargando(false);
     });
-  }, []);
+  }, [filtroFecha]);      
 
   return (
     <div className="compras_container">
@@ -24,12 +30,20 @@ function Compras() {
         <EmptyCompras /> // Si no hay compras muestra el componente vacio
       ) : (
         <>
-          <h2>Mis Compras</h2>
+          <h2>Mis Compras</h2>          
           <div className="compras_filtros">
-            <h3>Buscar</h3>
+
+            <div className="compras_filtros_select">
+              <h3>Fecha</h3>
+              <select name="fecha_sel" id="fecha_sel" onChange={handlerChange}>
+                <option value="D">Descendente</option>
+                <option value="A">Ascendente</option>
+              </select>
+            </div>            
           </div>
+
           {compras.map((compra) => (
-            <CompraItem key={compra.id} compra={compra} />
+            <CompraItem key={compra.id} compra={compra} />            
           ))}
         </>
       )}
@@ -38,13 +52,3 @@ function Compras() {
 }
 
 export default Compras;
-
-/* <>
-  <h2>Mis Compras</h2>
-  <div className="compras_filtros">
-    <h3>Filtros de Búsqueda</h3>
-  </div>
-  <div className="compras_listado">
-    <h3>sdsd</h3>
-  </div>
-</> */
