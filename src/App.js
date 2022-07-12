@@ -10,6 +10,8 @@ import Error from "./Pages/Error/Error";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./Pages/Cart/Cart";
 import Compras from "./Pages/Compras/Compras";
+import Login from "./Pages/Login/Login";
+
 
 
 function App() {  
@@ -23,7 +25,8 @@ function App() {
           <NavBar />        
 
           <Routes>            
-            <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } /> 
+            {/* <Route path="/" element={ <Login /> } />  */}
+            <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
             <Route path="/category/:tipo" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
             <Route path="/item/:id" element={ <ItemDetailContainer /> } />          
             <Route path="/cart" element={ <Cart /> } />

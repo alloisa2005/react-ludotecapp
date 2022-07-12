@@ -1,0 +1,42 @@
+
+.login_container {
+    width: 100%;
+    height: calc(100vh - 135px);
+    display: flex;    
+    background-color: #030C40;
+}
+
+.login_left {
+    height: 100%;    
+    flex: 1;    
+    display: grid;
+    place-items: center;    
+}
+
+.login_right {
+    height: 100%;    
+    flex: 1;
+}
+
+.login_left_logo {    
+    height: 500px;
+    width: 80%;    
+    border-radius: 20px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_left_logo h3 {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    color: white;
+    margin-top: 40px;
+}
+
+.login_left_logo img {
+    width: 100%;
+    height: 80%;
+    object-fit: contain; 
+}
