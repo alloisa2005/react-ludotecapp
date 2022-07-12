@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import "./NavBar.css";
 
@@ -7,12 +7,9 @@ import { Link } from 'react-router-dom';
 
 // Componentes
 import CartWidget from "../CartWidget/CartWidget";
-import { CartContext } from "../../context/CartContext";
 
 
-function NavBar() {   
-
-  const { cantidadItems } = useContext(CartContext);
+function NavBar() {     
 
   return (    
     <header className="header"> 
@@ -31,10 +28,8 @@ function NavBar() {
           <Link to={ "/category/accesorio" } className="li_item">Accesorios</Link>                    
           <Link to={ "/compras" } className="li_item">Compras</Link> 
 
-          {
-            // Si la cantidad de elementos en el carrito es nula, oculto el icono del carrito
-            cantidadItems() > 0 ? <CartWidget /> : null        
-          }          
+          {/* El CartWidget se muestra siempre, sea 0 o no la cantidad del carrito */}
+          <CartWidget />           
           
         </ul>
       </nav>
