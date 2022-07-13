@@ -25,7 +25,7 @@
     background-color: white;
     border-radius: 15px;
     width: 75%;
-    height: 75%;
+    height: 85%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     width: 75%;    
     padding: 10px 0;
     font-size: 2rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .login_right_form p {
