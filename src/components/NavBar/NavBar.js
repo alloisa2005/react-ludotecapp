@@ -1,42 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import logo from "../../images/logo.png";
 
 import "./NavBar.css";
 
-import logo from "../../images/logo.png";
-import { Link } from 'react-router-dom';
-
-// Componentes
+import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
+function NavBarP() {
 
-function NavBar() {     
+  const [active, setActive] = useState(false);
+   
+  const changeActive = ()=>{
+    setActive(!active);
+  }
 
-  return (    
-    <header className="header"> 
+  return (
+    <nav className="nav__wrapper">
+      <Link to={'/'} className="nav__logo">
+        <img src={logo} alt="logo" />
+        <h3>Ludotecapp</h3> 
+      </Link>
 
-      <Link to="/" className="header__left">
-        <img src={logo} alt="Ludotecapp Logo" className="header__logo" />
-        <h3>Ludotecapp</h3>        
-      </Link>                  
+      <ul onClick={changeActive} className={ active ? "nav__items active" : "nav__items"}>
+        <Link to={'/'} className="li_item">Home</Link>
+        <Link to={'/category/carta'} className="li_item">Juegos de Carta</Link>
+        <Link to={'/category/tablero'} className="li_item">Juegos de Tablero</Link>
+        <Link to={'/category/accesorio'} className="li_item">Accesorios</Link>
+        <Link to={'/compras'} className="li_item">Compras</Link>
+        <CartWidget />        
+      </ul>
 
-      <nav className="header__right">
-        <ul>
-        
-          <Link to={ "/" } className="li_item">Inicio</Link>
-          <Link to={ "/category/carta" } className="li_item">Juegos de Cartas</Link>
-          <Link to={ "/category/tablero" } className="li_item">Juegos de Tablero</Link>          
-          <Link to={ "/category/accesorio" } className="li_item">Accesorios</Link>                    
-          <Link to={ "/compras" } className="li_item">Compras</Link> 
-
-          {/* El CartWidget se muestra siempre, sea 0 o no la cantidad del carrito */}
-          <CartWidget />           
-          
-        </ul>
-      </nav>
-
-    </header>
+      <MenuIcon className="menu_icon" onClick={ changeActive }/>
+    </nav>
   );
 }
 
-export default NavBar;
-
+export default NavBarP;

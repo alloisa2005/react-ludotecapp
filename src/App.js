@@ -20,8 +20,8 @@ function App() {
       <CartContextProvider>
 
         <div className="App">
-          <NavBar />        
-
+          <NavBar /> 
+          
           <Routes>            
             <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } /> 
             <Route path="/category/:tipo" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
