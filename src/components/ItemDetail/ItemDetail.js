@@ -21,7 +21,7 @@ import { dark } from "@mui/material/styles/createPalette";
 function ItemDetail({ juego }) {
   const [stockJuego, setStockJuego] = useState(juego.stock);
 
-  const { addCart } = useContext(CartContext);  
+  const { addCart } = useContext(CartContext);
 
   function onAdd(cant) {
     if (cant > 0) {
@@ -45,8 +45,8 @@ function ItemDetail({ juego }) {
       draggable: true,
       progress: undefined,
       theme: "dark",
-      });
-  }
+    });
+  };
 
   return (
     <>
@@ -109,21 +109,25 @@ function ItemDetail({ juego }) {
           </div>
         </div>
 
-        <div className="division"></div>
-
-        <div className="item_detail_game">
-          <h2 className="item_detail_subtitle">Sinopsis</h2>
-          <div className="item_detail_game_desc">
-            <p>{juego.descripcion}</p>
+        {juego.categoria === "accesorio" ? null : (
+          <div className="item_detail_game">
+            <h2 className="item_detail_subtitle">Sinopsis</h2>
+            <div className="item_detail_game_desc">
+              <p>{juego.descripcion}</p>
+            </div>
           </div>
-        </div>
+        )}
 
-        <div className="division"></div>
+        {juego.categoria === "accesorio" ? null : (
+          <>
+            <div className="division"></div>
 
-        <div className="item_detail_game">
-          <h2 className="item_detail_subtitle">¿Cómo Jugar?</h2>
-          <VideoContainer source={juego.yt} />
-        </div>
+            <div className="item_detail_game">
+              <h2 className="item_detail_subtitle">¿Cómo Jugar?</h2>
+              <VideoContainer source={juego.yt} />
+            </div>
+          </>
+        )}
       </div>
     </>
   );

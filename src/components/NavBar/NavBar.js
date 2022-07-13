@@ -17,7 +17,7 @@ function NavBarP() {
 
   return (
     <nav className="nav__wrapper">
-      <Link to={'/'} className="nav__logo">
+      <Link to={'/'} className="li_item nav__logo">
         <img src={logo} alt="logo" />
         <h3>Ludotecapp</h3> 
       </Link>
