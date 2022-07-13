@@ -2,17 +2,15 @@ import React, {useState} from "react";
 import "./Login.css";
 import logo from "../../images/logo.png";
 
-import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
-import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
+import IniciarSesion from "./IniciarSesion";
+import CrearUsuario from "./CrearUsuario";
 
 function Login() {
 
-  const [isSignUp, setIsSignUp] = useState(true);
+  const [inicioSesion, setInicioSesion] = useState(true);
   
   const handlerChange = () => {
-    setIsSignUp(!isSignUp);
+    setInicioSesion(!inicioSesion);
   }
 
   return (
@@ -28,7 +26,7 @@ function Login() {
         <div className="login_right_form">
           <h2>Bienvenidos</h2>
             {
-              isSignUp ? <SignUp change={handlerChange} /> : <SignIn change={handlerChange} /> 
+              inicioSesion ? <IniciarSesion change={handlerChange} /> : <CrearUsuario change={handlerChange} /> 
             }            
         </div>
       </div>
