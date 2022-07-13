@@ -1,11 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Login.css";
 import logo from "../../images/logo.png";
 
 import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
 import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 function Login() {
+
+  const [isSignUp, setIsSignUp] = useState(true);
+  
+  const handlerChange = () => {
+    setIsSignUp(!isSignUp);
+  }
+
   return (
     <div className="login_container">
       <div className="login_left">
@@ -18,17 +27,9 @@ function Login() {
       <div className="login_right">
         <div className="login_right_form">
           <h2>Bienvenidos</h2>
-
-          <div className="login_campos">
-            <MailOutlineRoundedIcon className="login_iconos" />
-            <input type="mail" placeholder="E-mail" />
-          </div>
-          <div className="login_campos">
-            <HttpsRoundedIcon className="login_iconos" />
-            <input type="Password" placeholder="Password" />
-          </div>
-          <button className="itemCount_btn_cart">Iniciar Sesión</button>          
-          <p>Crear Usuario</p>
+            {
+              isSignUp ? <SignUp change={handlerChange} /> : <SignIn change={handlerChange} /> 
+            }            
         </div>
       </div>
     </div>
