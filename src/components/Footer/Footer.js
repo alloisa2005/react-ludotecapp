@@ -21,11 +21,11 @@ function Footer() {
     <div className="footer_center">
       <FacebookIcon className="footer__icon" />
       <InstagramIcon className="footer__icon" />      
-      <WhatsAppIcon className="footer__icon" />
+      <WhatsAppIcon className="footer__icon" /> 
     </div>
 
     <div className="footer_right">
-      <h4>Sitio por Aa</h4>
+      <h3>Sitio por Aa</h3>
       <InstagramIcon className="footer__icon" />
     </div>
 

@@ -11,12 +11,12 @@
 
 .footer__icon {
     margin-right: 15px;
-    width: 40px !important;
-    height: 40px !important;
+    width: 30px !important;
+    height: 30px !important;
 }
 
 .footer__left h3 { 
-    font-size: 1rem;
+    font-size: .9rem;
     letter-spacing: 1.2px;
 }
 
@@ -25,6 +25,7 @@
     align-items: center;
 }
 
-.footer_right h4 {
+.footer_right h3 {
     margin-right: 8px;
+    font-size: .9rem;
 }
