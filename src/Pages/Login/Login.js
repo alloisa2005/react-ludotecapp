@@ -1,17 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../images/logo.png";
 
 import IniciarSesion from "./IniciarSesion";
 import CrearUsuario from "./CrearUsuario";
 
-function Login() {
+
+function Login() {  
 
   const [inicioSesion, setInicioSesion] = useState(true);
-  
+
   const handlerChange = () => {
     setInicioSesion(!inicioSesion);
-  }
+  };
 
   return (
     <div className="login_container">
@@ -25,9 +26,11 @@ function Login() {
       <div className="login_right">
         <div className="login_right_form">
           <h2>Bienvenidos</h2>
-            {
-              inicioSesion ? <IniciarSesion change={handlerChange} /> : <CrearUsuario change={handlerChange} /> 
-            }            
+          {inicioSesion ? (
+            <IniciarSesion change={handlerChange} />
+          ) : (
+            <CrearUsuario change={handlerChange} />
+          )}
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut 
 } from "firebase/auth";
 
 export const UserContext = createContext();
@@ -50,6 +51,7 @@ function UserContextProvider({ children }) {
           setUser(null);
         }
       });      
+      msj.OK = true;
 
     } catch (error) {      
       msj.OK = false;
@@ -60,8 +62,23 @@ function UserContextProvider({ children }) {
 
   };
 
+  const cerrarSesion = () => {
+
+    let msj = {};
+
+    signOut(auth).then(() => {
+      setUser(null);
+      msj.OK = true;
+    }).catch((error) => {
+      msj.OK = false;
+      msj.desc = error.message;
+    });
+
+    return msj;
+  }
+
   return (
-    <UserContext.Provider value={{ user, crearUsuario, loguearUsuario }}>
+    <UserContext.Provider value={{ user, crearUsuario, loguearUsuario, cerrarSesion }}>
       {children}
     </UserContext.Provider>
   );

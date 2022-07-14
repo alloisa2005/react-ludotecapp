@@ -19,6 +19,9 @@ li {
     list-style-type: none;
 }
 
+.mr {
+    margin-right: 10px;
+}
 
 /*
 font-family: 'Special Elite', cursive;

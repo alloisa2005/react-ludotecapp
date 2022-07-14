@@ -3,6 +3,7 @@ import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
 import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
 import { UserContext } from "../../context/UserContext";
 import { Alert, CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 
 const initialError = {
@@ -11,6 +12,7 @@ const initialError = {
 };
 
 function IniciarSesion({ change }) {
+  let navigate = useNavigate();
 
   const { loguearUsuario } = useContext(UserContext);
 
@@ -33,13 +35,17 @@ function IniciarSesion({ change }) {
 
   const handlerInicioSesion = (e) => {     
     setLogueando(true);   
-    loguearUsuario(email, password).then(res=> {
+    loguearUsuario(email, password).then(res=> {      
       setError(res);
       setLogueando(false);
-    });
-    
-    setEmail("");    
-    setPassword("");    
+      if(res.OK){
+
+        setEmail("");    
+        setPassword(""); 
+
+        navigate("/");
+      }
+    });           
   }
 
   return (
