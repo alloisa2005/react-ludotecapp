@@ -16,7 +16,8 @@ const style = {
   p: 4,
 };
 
-export default function NoProductModal() {
+export default function NoProductModal({ titulo, subtitulo }) {
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -32,10 +33,10 @@ export default function NoProductModal() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            No hay productos en el carrito
+            { titulo }
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            El carrito se encuentra vacío, no se puede continuar con la compra.
+            { subtitulo }
           </Typography>
         </Box>
       </Modal>

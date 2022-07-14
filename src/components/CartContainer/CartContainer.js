@@ -4,15 +4,18 @@ import { CartContext } from "../../context/CartContext";
 import { separadorMiles } from "../../utilidades/Utilidades";
 import CartDetail from "../CartDetail/CartDetail";
 import "./CartContainer.css";
-import visa from '../../images/visa_logo.png'
-import mastercard from '../../images/mastercard_logo.png'
-import american from '../../images/american_logo.png'
-import diners from '../../images/diners_logo.jpg'
+import visa from "../../images/visa_logo.png";
+import mastercard from "../../images/mastercard_logo.png";
+import american from "../../images/american_logo.png";
+import diners from "../../images/diners_logo.jpg";
 import FormCompra from "../FormCompra/FormCompra";
 import NoProductModal from "../NoProductModal/NoProductModal";
+import { UserContext } from "../../context/UserContext";
 
 function CartContainer() {
-  const { cartList, cantidadItems, montoTotalCart, iva, envio, total } = useContext(CartContext);
+  const { cartList, cantidadItems, montoTotalCart, iva, envio, total } =
+    useContext(CartContext);
+  const { user } = useContext(UserContext);
 
   return (
     <>
@@ -44,41 +47,57 @@ function CartContainer() {
 
           <div className="cartDetail_container_right_section">
             <h3>SubTotal ($):</h3>
-            <p>{separadorMiles( montoTotalCart() )}</p>  
+            <p>{separadorMiles(montoTotalCart())}</p>
           </div>
-          
+
           <div className="cartDetail_container_right_section">
             <h3>IVA - 20% ($):</h3>
-            <p>{separadorMiles( iva() )}</p>  
+            <p>{separadorMiles(iva())}</p>
           </div>
-          
+
           <div className="cartDetail_container_right_section">
             <h3>Envío ($):</h3>
-            <p>{separadorMiles( envio() )}</p>  
+            <p>{separadorMiles(envio())}</p>
           </div>
-          
+
           <div className="cartDetail_container_right_section_total">
             <h3>TOTAL ($):</h3>
-            <p>{separadorMiles( total() )}</p>  
-          </div> 
+            <p>{separadorMiles(total())}</p>
+          </div>
 
           <div className="cartDetail_container_right_section_logos">
             <img src={visa} alt="Visa Logo" />
             <img src={mastercard} alt="MasterCard Logo" />
             <img src={american} alt="American Logo" />
             <img src={diners} alt="Diners Logo" />
-          </div>       
+          </div>
 
-          <div className="botones_container">     
-            { /* Llamo al formulario de compra (un modal) */
-              cantidadItems() > 0 ? <FormCompra /> : <NoProductModal />
-            }                   
-            
-            <Link to={'/'}>
-              <button className="botones_container_btn btn_white">Seguir comprando</button>
-            </Link>            
-          </div>          
+          <div className="botones_container">
+            {
+              /* Llamo al formulario de compra (un modal) */
+              cantidadItems() > 0 ? (
+                user?.email ? (
+                  <FormCompra />
+                ) : (
+                  <NoProductModal
+                    titulo="Usuario Incorrecto"
+                    subtitulo="Debe loguearse para continuar con la compra"
+                  />
+                )
+              ) : (
+                <NoProductModal
+                  titulo="No hay productos en el carrito"
+                  subtitulo="El carrito se encuentra vacío, no se puede continuar con la compra."
+                />
+              )
+            }
 
+            <Link to={"/"}>
+              <button className="botones_container_btn btn_white">
+                Seguir comprando
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

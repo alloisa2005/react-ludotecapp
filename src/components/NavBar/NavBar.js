@@ -8,11 +8,16 @@ import { Link } from 'react-router-dom';
 // Componentes
 import CartWidget from "../CartWidget/CartWidget";
 import { CartContext } from "../../context/CartContext";
+import { UserContext } from "../../context/UserContext";
+
 import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+
 
 function NavBar() {   
 
   const { cantidadItems } = useContext(CartContext);
+  const { user } = useContext(UserContext);
 
   return (    
     <header className="header"> 
@@ -31,8 +36,8 @@ function NavBar() {
           <Link to={ "/category/accesorio" } className="li_item">Accesorios</Link>                              
           <Link to={ "/login" } className="li_item"> 
             <div className="nav_login_container">
-              <LoginRoundedIcon className="nav_login_icon"/> 
-              <p className="nav_login_texto">Log In</p>
+              { user?.email ? <LogoutRoundedIcon className="nav_login_icon"/> : <LoginRoundedIcon className="nav_login_icon"/> }
+              <p className="nav_login_texto">{user?.email ? 'Log Out': 'Log In'}</p>
             </div>
           </Link>  
           <CartWidget />
