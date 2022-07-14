@@ -24,13 +24,13 @@ function App() {
         <div className="App">
           <NavBar />        
 
-          <Routes>            
-            <Route path="/" element={ <Login /> } /> 
-            {/* <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } /> */}
+          <Routes>                        
+            <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
             <Route path="/category/:tipo" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } />
             <Route path="/item/:id" element={ <ItemDetailContainer /> } />          
             <Route path="/cart" element={ <Cart /> } />
             <Route path="/compras" element={ <Compras /> } /> 
+            <Route path="/login" element={ <Login /> } /> 
             <Route path="*" element={ <Error /> } />          
           </Routes>        
           

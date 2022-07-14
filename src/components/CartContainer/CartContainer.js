@@ -21,9 +21,15 @@ function CartContainer() {
           Mi Carrito ({cantidadItems()} {cantidadItems() > 1 ? "items" : "item"}
           )
         </h2>
-        <Link to={"/"} className="a_per">
-          <h4>Seguir Comprando</h4>{" "}
-        </Link>
+
+        <div className="cartContainer_title_right">
+          <Link to={"/"} className="a_per">
+            <h4>Seguir Comprando</h4>{" "}
+          </Link>
+          <Link to={"/compras"} className="a_per">
+            <h4>Historial de Compras</h4>{" "}
+          </Link>
+        </div>
       </div>
 
       <div className="cartDetail_container">

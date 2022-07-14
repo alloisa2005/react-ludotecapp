@@ -42,8 +42,8 @@ function Compras() {
             </div>            
           </div>
 
-          {compras.map((compra) => (
-            <CompraItem key={compra.id} compra={compra} />            
+          {compras.map((compra, index) => (
+            <CompraItem key={index} compra={compra} />            
           ))}
         </>
       )}

@@ -5,7 +5,7 @@
     background-color: #030C40;    
     padding: 10px 35px;   
     color: white;   
-    height: 70px; 
+    height: 70px; overflow-y: hidden;
 }
 
 .buscar_container {
@@ -98,4 +98,22 @@
     padding: 3px;
     font-size: .7rem;
     border-radius: 10px;
+}
+
+.nav_login_container {
+    display: flex;    
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_login_icon {
+    height: 27px!important;
+    width: 27px!important;
+}
+
+.nav_login_texto {
+    font-size: .95rem;
+    color: white;    
 }

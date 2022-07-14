@@ -1,8 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import './EmptyCart.css'
 import emptyCart from '../../images/emptyCart.png'
 import { Link } from 'react-router-dom'
-import { TextField } from '@mui/material'
 
 
 function EmptyCart() {  
@@ -15,9 +14,12 @@ function EmptyCart() {
 
         <div className='empty_container_cosas'>
           <h1>Carrito Vacío</h1>
-          <Link to='/'>
+          <Link to='/' style={{marginRight:"20px"}}>
             <button className='itemCount_btn_cart'>Inicio</button>
-          </Link>            
+          </Link>  
+          <Link to='/compras'>
+            <button className='itemCount_btn_cart'>Historial de Compras</button>
+          </Link>           
         </div>                
 
     </div>

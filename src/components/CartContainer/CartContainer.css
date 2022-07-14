@@ -2,7 +2,14 @@
 .cartContainer_title{
     display: flex;
     align-items: center;    
+    justify-content: space-between;
     margin-bottom: 22px;
+}
+
+.cartContainer_title_right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
 }
 
 .cartContainer_title h2 {
