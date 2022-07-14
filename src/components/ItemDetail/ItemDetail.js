@@ -19,6 +19,7 @@ import { updateStockJuego } from "../../firebase/firebaseFunciones";
 import { dark } from "@mui/material/styles/createPalette";
 
 function ItemDetail({ juego }) {
+  
   const [stockJuego, setStockJuego] = useState(juego.stock);
 
   const { addCart } = useContext(CartContext);  

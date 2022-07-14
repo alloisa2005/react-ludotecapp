@@ -34,6 +34,16 @@ function CrearUsuario({ change }) {
   };
 
   const handlerCrearUsuario = (e) => {
+
+    if(pass !== passConf){
+      setPassConf("");
+      setError({
+        OK: false,
+        desc: "Las contraseñas no coinciden"
+      });
+      return;
+    }
+
     setCreando(true);
     crearUsuario(email, pass).then((res) => {
       setError(res);

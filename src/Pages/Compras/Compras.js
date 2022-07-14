@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Compras.css";
 import EmptyCompras from "../../components/EmptyCompras/EmptyCompras";
-import { getAllCompras } from "../../firebase/firebaseFunciones";
+import { getAllCompras, getComprasFecha } from "../../firebase/firebaseFunciones";
 import Spinner from "../../components/Spinner/Spinner";
 import CompraItem from "../../components/CompraItem/CompraItem";
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
 let fchInicial = new Date();
 
@@ -16,8 +17,16 @@ function Compras() {
   const [fchDesde, setFchDesde] = useState(fchInicial);
   const [fchHasta, setFchHasta] = useState(fchInicial);
 
-  const handlerChange = (e) => {    
-    setFiltroFecha(e.target.value);
+
+  const handlerChange = (e) => setFiltroFecha(e.target.value);  
+
+  const handlerFchDesde = (e) => setFchDesde(e.target.value);
+
+  const handlerFchHasta = (e) => setFchHasta(e.target.value);
+
+  const handlerBuscarFechas = () => {
+    getComprasFecha(fchDesde, fchHasta)
+      .then(res => setCompras(res));
   }
 
   useEffect(() => {    
@@ -48,15 +57,17 @@ function Compras() {
               </select>
             </div>  
 
-            <div style={{display:"flex"}}>
+            <div style={{display:"flex", alignItems:"center"}}>
               <div style={{display:"flex", marginRight:"35px"}}>
                 <h3 style={{marginRight:"10px"}}>Fecha Desde</h3>
-                <input type="date" />
+                <input type="date" value={fchDesde} onChange={handlerFchDesde} />
               </div>
               <div style={{display:"flex"}}>
                 <h3 style={{marginRight:"10px"}}>Fecha Hasta</h3>
-                <input type="date" />
-              </div>              
+                <input type="date" value={fchHasta} onChange={handlerFchHasta} min={fchDesde} />
+              </div>
+
+              <SearchRoundedIcon className="compras_search_icon" onClick={handlerBuscarFechas}/>
             </div>
           </div>
 

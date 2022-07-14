@@ -4,9 +4,7 @@ import emptyCart from '../../images/emptyCart.png'
 import { Link } from 'react-router-dom'
 
 
-function EmptyCart() {  
-
-  //let dd = parseInt((new Date('2012/12/31').getTime() / 1000).toFixed(0))
+function EmptyCart() {    
 
   return (
     <div className='empty_container'>

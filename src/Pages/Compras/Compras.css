@@ -55,3 +55,14 @@
     padding: 8px 0;
     outline: none;
 }
+
+.compras_search_icon {
+    margin-left: 15px;    
+    height: 27px!important;
+    width: 27px!important;
+    color: #030C40;
+}
+
+.compras_search_icon:hover {        
+    cursor: pointer;
+}

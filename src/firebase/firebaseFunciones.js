@@ -69,3 +69,22 @@ export const getAllCompras = async (filtroFecha) => {
 
   return compras;
 };
+
+export const getComprasFecha = async (fchDesde, fchHasta) => {
+  
+  let desde = parseInt((new Date(fchDesde).getTime() / 1000).toFixed(0))
+  let hasta = parseInt((new Date(fchHasta).getTime() / 1000).toFixed(0))
+  console.log(desde, hasta);
+
+  let q = query(collection(db, "compras"), where("date", ">=", desde), where("date", "<=", hasta));  
+
+  const querySnapshot = await getDocs(q);
+
+  let compras = [];
+
+  querySnapshot.forEach((doc) => {
+    compras.push({ ...doc.data(), id: doc.id });
+  });
+
+  return compras; 
+};
