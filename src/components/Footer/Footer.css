@@ -1,18 +1,18 @@
 
 .footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #030C40;    
-    padding: 10px 35px;    
-    color: white;
-    height: 65px;
+    padding: 10px 0;  
+    color: white;    
+    height: 15vh;
 }
 
 .footer__icon {
-    margin-right: 15px;
-    width: 40px !important;
-    height: 40px !important;
+    width: 30px !important;
+    height: 30px !important;
 }
 
 .footer__left h3 { 
@@ -23,8 +23,10 @@
 .footer_right {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .footer_right h4 {
-    margin-right: 8px;
+    margin: 0;
+    font-size: 1rem;    
 }

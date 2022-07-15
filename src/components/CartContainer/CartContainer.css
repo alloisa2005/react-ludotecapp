@@ -1,14 +1,24 @@
 
 .cartContainer_title{
     display: flex;
-    align-items: center;    
-    margin-bottom: 22px;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;      
+    width: 100%;
+    margin-bottom: 20px;
 }
+
+@media only screen and (min-width: 768px) {   
+    .cartContainer_title{
+        flex-direction: row;
+        justify-content: space-between; 
+    }     
+}
+    
 
 .cartContainer_title h2 {
     font-size: 2rem;    
-    color: #030C40;    
-    margin-right: 40px;
+    color: #030C40;        
 }
 
 .cartContainer_title h4 {        

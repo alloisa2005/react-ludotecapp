@@ -17,13 +17,24 @@ function CartContainer() {
   return (
     <>
       <div className="cartContainer_title">
-        <h2>
-          Mi Carrito ({cantidadItems()} {cantidadItems() > 1 ? "items" : "item"}
-          )
-        </h2>
-        <Link to={"/"} className="a_per">
-          <h4>Seguir Comprando</h4>{" "}
-        </Link>
+          <div className="w-100 text-center text-sm-start">
+            <h2>
+              Mi Carrito ({cantidadItems()} {cantidadItems() > 1 ? "items" : "item"}
+              )
+            </h2>        
+          </div>
+
+          <div className="w-100 d-flex justify-content-between justify-content-sm-end">
+            <Link to={"/"} className="a_per mx-sm-4">
+              <h4>Seguir Comprando</h4>
+            </Link>
+
+            <Link to={"/"} className="a_per">
+              <h4>Vaciar Carrito</h4>
+            </Link>
+          </div>
+        
+
       </div>
 
       <div className="cartDetail_container">
