@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
-function NavBarP() {
+function NavBar() {
 
   const [active, setActive] = useState(false);
    
@@ -36,4 +36,4 @@ function NavBarP() {
   );
 }
 
-export default NavBarP;
+export default NavBar;

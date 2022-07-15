@@ -4,7 +4,7 @@
     min-height: calc(100vh - 70px - 60px);  /* resto las medidas del header y footer */
     width: 90%;    
     margin: 0 auto;    
-    text-align: center;    
+    text-align: center;        
 }
 
 .titulo {

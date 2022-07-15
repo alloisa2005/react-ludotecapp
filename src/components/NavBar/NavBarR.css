@@ -1,0 +1,10 @@
+
+.navbar-dark {
+    background-color: #030C40!important;   
+}
+
+.nav__logo_img {
+    width: 50px;
+    object-fit: contain;
+    margin-right: 15px;
+}

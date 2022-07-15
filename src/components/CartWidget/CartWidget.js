@@ -13,10 +13,10 @@ function CartWidget() {
   /* const [cartList] = useCartContext(); */
 
   return (
-    <Link to="/cart" className="cart">
-      <ShoppingCartIcon className="cart_icon" />
+    <Link to="/cart" className="nav-link titulos_navbar a_per">
       <div className="cart_cant">
-        <p>{cantidadItems()}</p>
+        <ShoppingCartIcon className="cart_icon" />
+        <p className="cart_icon_p">{cantidadItems()}</p>
       </div>
     </Link>
   );

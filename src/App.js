@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
 
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import NavBar from "./components/NavBar/NavBar";
+import NavBarR from "./components/NavBar/NavBarR";
 import Error from "./Pages/Error/Error";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./Pages/Cart/Cart";
@@ -20,7 +20,7 @@ function App() {
       <CartContextProvider>
 
         <div className="App">
-          <NavBar /> 
+          <NavBarR /> 
           
           <Routes>            
             <Route path="/" element={ <ItemListContainer  greeting="Compra tus juegos de mesa favoritos" /> } /> 
