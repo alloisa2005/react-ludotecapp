@@ -6,7 +6,7 @@
 .itemList_grid {
     margin: 15px 0;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-template-rows: auto;
     gap: 25px;
     padding: 20px;
@@ -14,14 +14,20 @@
 
 
 
-@media only screen and (max-width: 811px) {
+@media only screen and (min-width: 576px) {
     .itemList_grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (min-width: 992px) {
     .itemList_grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .itemList_grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
