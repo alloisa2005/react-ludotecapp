@@ -8,9 +8,10 @@ function NavBarR() {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark" id="miHeader">
       <div className="container">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand navbar_logo" to={"/"}>
           <img className="nav__logo_img" src={logo} alt="Logo" />
-        </a>
+          <h3 className="d-none d-sm-block">Ludotecapp</h3>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
