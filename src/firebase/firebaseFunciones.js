@@ -72,9 +72,8 @@ export const getAllCompras = async (filtroFecha) => {
 
 export const getComprasFecha = async (fchDesde, fchHasta) => {
   
-  let desde = parseInt((new Date(fchDesde).getTime() / 1000).toFixed(0))
-  let hasta = parseInt((new Date(fchHasta).getTime() / 1000).toFixed(0))
-  console.log(desde, hasta);
+  let desde = new Date(fchDesde); 
+  let hasta = new Date(fchHasta);   
 
   let q = query(collection(db, "compras"), where("date", ">=", desde), where("date", "<=", hasta));  
 
