@@ -14,15 +14,10 @@ function Footer() {
 
   return (
   <footer className="footer">
+    
     <div className="footer__left">
       <h3>Ludotecapp &copy; {anio}</h3>
-    </div>
-
-    <div className="footer_center">
-      <FacebookIcon className="footer__icon" />
-      <InstagramIcon className="footer__icon" />      
-      <WhatsAppIcon className="footer__icon" />
-    </div>
+    </div>    
 
     <div className="footer_right">
       <h4>Sitio por Aa</h4>
