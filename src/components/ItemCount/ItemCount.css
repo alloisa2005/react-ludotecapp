@@ -2,7 +2,7 @@
 .itemCount_container {    
     display: grid;
     place-items: center;    
-    margin: 10px 0;
+    margin: 5px 0;
     user-select: none;    
 }
 
@@ -14,16 +14,16 @@
 }
 
 .itemCount_controles_button {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     border: 1px solid #030C40;
     background-color: #030C40;
     color: white;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    padding: 8px;
+    
     margin: 0 15px;
 }
 
@@ -47,21 +47,25 @@
 }
 
 .itemCount_unidades span {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
 .buttons_container {
     margin-top: 5px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 20px; 
+    width: 100%;
 }
+
 .itemCount_btn_cart {
+    width: 100%;
     text-align: center;
     padding: 9px 20px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;  
     border-radius: 10px;
     background-color: #030C40;
@@ -85,4 +89,10 @@
 .itemCount_unidades span {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .buttons_container {
+        flex-direction: row;
+    }
 }

@@ -26,7 +26,7 @@ const ModalPre = ({img}) =>{
 
   return (
     <div>
-      <Button style={{width:"100%", height:"455px", position:"relative"}} onClick={handleOpen}>
+      <Button style={{width:"100%", height:"350px", position:"relative"}} onClick={handleOpen}>
         <img src={img} style={{width:"100%", height:"100%", objectFit:"contain"}} alt="Imagen" />
       </Button>
       <Modal

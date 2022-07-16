@@ -31,19 +31,33 @@
 
 .item_detail h1 {
     font-family: 'Special Elite', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #030C40;
 }
 
-.item_detail_container{
-    margin-top: 15px;
+.item_detail_container{    
     display: flex;
+    flex-direction: column;
 }
 
-.item_left {
-    flex: 0.65;
+@media only screen and (min-width: 576px) {
+    .item_detail h1 {     
+        font-size: 2.3rem;     
+    }    
+}    
+
+@media only screen and (min-width: 992px) {    
+    .item_detail_container{    
+        display: flex;
+        flex-direction: row;        
+        align-items: center;
+    }    
     
+    .item_right{
+        flex: 1;
+    }
 }
+
 
 .item_left_img {
     width: 100%;
@@ -51,9 +65,9 @@
     object-fit: contain;
 }
 
+
 .item_right {
-    background-color: #E8E8EC;
-    flex: 0.35;
+    background-color: #E8E8EC;    
     padding: 15px 20px;
 }
 
@@ -61,14 +75,13 @@
     font-size: 1.1rem;    
 }
 
-.item_right_disp span{
-    font-weight: bold;
+.item_right_precio {        
+    font-size: 1.9rem;
+    font-weight: bold;    
 }
 
-.item_right_precio {    
-    margin-top: 20px;
-    font-size: 2.2rem;
-    font-weight: bold;    
+.item_right_disp span{
+    font-weight: bold;
 }
 
 .item_right_precio_span {    
@@ -78,9 +91,8 @@
     color: grey;
 }
 
-.item_right_iconos{
-    margin-top: 20px;
-    display: flex;
+.item_right_iconos{    
+    display: flex;    
     align-items: center;
     justify-content: space-around;
 }
@@ -88,12 +100,12 @@
 .icon_div {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .icon_div_icon {
-    width: 50px!important;
-    height: 50px!important;
+    width: 45px!important;
+    height: 45px!important;
     color: white;
     background-color: #030C40;
     border-radius: 50%;
@@ -101,9 +113,23 @@
 }
 
 .icon_div p {
-    font-size: 1.3rem;
+    margin: 0;
+    font-size: 1.1rem;
     font-weight: bold;
 }
+
+@media only screen and (min-width: 576px) {    
+    .icon_div p {     
+        font-size: 1.3rem;     
+    }
+}    
+
+@media only screen and (min-width: 768px) {    
+}
+
+
+
+
 
 .division {
     margin-top: 15px;
@@ -168,27 +194,28 @@
 }
 
 .icon_envio p {
+    margin: 0;
     font-size: 1.2rem;        
     font-weight: bold;
 }
 
 .item_detail_game {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 1.2em;
 }
 .item_detail_subtitle {
     font-family: 'Special Elite', cursive;
-    font-size: 2.0rem;
+    font-size: 2rem;
     color: #030C40;
 }
 
 .item_detail_game_desc {    
-    width: 93%;
-    margin: 10px auto;
+    width: 100%;
+    margin: 8px auto;
 }
 
 .item_detail_game_desc p {
     text-align: justify;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.3;
 }

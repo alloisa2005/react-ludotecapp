@@ -63,7 +63,7 @@ function ItemCount({ stock, initial, onAdd }) {
 
         {/* Si el carrito está vacío oculo el botón de "Ir al Carrito", de lo contrario lo muestro */}
         {cantidadItems() === 0 ? null : (
-          <Link to="/cart">
+          <Link to="/cart" style={{width:"100%"}}>
             <button className="itemCount_btn_cart">Ir al Carrito</button>
           </Link>
         )}

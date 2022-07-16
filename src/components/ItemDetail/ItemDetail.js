@@ -16,7 +16,6 @@ import { separadorMiles } from "../../utilidades/Utilidades";
 import { CartContext } from "../../context/CartContext";
 import { useContext, useState } from "react";
 import { updateStockJuego } from "../../firebase/firebaseFunciones";
-import { dark } from "@mui/material/styles/createPalette";
 
 function ItemDetail({ juego }) {
   const [stockJuego, setStockJuego] = useState(juego.stock);
@@ -51,19 +50,20 @@ function ItemDetail({ juego }) {
   return (
     <>
       {juego.categoria === "accesorio" ? null : (
-        <div className="img_portada">
+        <div className="d-none d-sm-block img_portada">
           <img src={juego.img_portada} alt={juego.nombre} />
           <div className="degradado"></div>
         </div>
       )}
 
-      <div className="item_detail">
+      <div className="text-center text-sm-start item_detail">
         <h1>{juego.nombre}</h1>
 
         <div className="item_detail_container">
           <div className="item_left">
             <ModalPre img={juego.img} />
           </div>
+
           <div className="item_right">
             <p className="item_right_disp">
               Disponibilidad:
@@ -78,9 +78,7 @@ function ItemDetail({ juego }) {
               <div className="item_right_iconos">
                 <div className="icon_div">
                   <PeopleRoundedIcon className="icon_div_icon" />
-                  <p>
-                    {juego.jug_min} - {juego.jug_max}
-                  </p>
+                  <p> {juego.jug_min} - {juego.jug_max} </p>
                 </div>
 
                 <div className="icon_div">
