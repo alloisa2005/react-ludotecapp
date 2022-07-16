@@ -9,8 +9,8 @@ function NavBarR() {
     <nav class="navbar navbar-expand-lg navbar-dark" id="miHeader">
       <div className="container">
         <Link className="navbar-brand navbar_logo" to={"/"}>
-          <img className="nav__logo_img" src={logo} alt="Logo" />
-          <h3 className="d-none d-sm-block">Ludotecapp</h3>
+          <img className="d-none d-sm-block nav__logo_img" src={logo} alt="Logo" />
+          <h3>Ludotecapp</h3>
         </Link>
         <button
           className="navbar-toggler"
@@ -28,27 +28,27 @@ function NavBarR() {
           id="navbarNav"
         >
           <ul className="navbar-nav text-center d-sm-flex flex-sm-row justify-content-sm-around my-sm-2">
-            <li className="nav-item mx-1">
+            <li className="nav-item mx-1 my-1">
               <Link to={'/'} className="nav-link titulos_navbar a_per">
                 Inicio
               </Link>
             </li>
-            <li className="nav-item mx-1">
+            <li className="nav-item mx-1 my-1">
               <Link to={'/category/carta'} className="nav-link titulos_navbar a_per">
                 Juegos de Carta
               </Link>
             </li>
-            <li className="nav-item mx-1">
+            <li className="nav-item mx-1 my-1">
               <Link to={'/category/tablero'} className="nav-link titulos_navbar a_per" href="./pages/compras.html">
               Juegos de Tablero
               </Link>
             </li>
-            <li className="nav-item mx-1">
+            <li className="nav-item mx-1 my-1">
               <Link to={'/category/accesorio'} className="nav-link titulos_navbar a_per" href="./pages/compras.html">
               Accesorios
               </Link>
             </li>
-            <li className="nav-item mx-1">
+            <li className="nav-item mx-1 my-1">
                 <CartWidget /> 
             </li>
             
