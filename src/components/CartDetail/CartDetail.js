@@ -43,8 +43,44 @@ function CartDetail({ item }) {
   }  
 
   return (
-    <div className="cart_item_detail">
-      <div style={{ width: "25%" }}>
+    <div className="cartItem_container">
+      <div className="cartItem_left">
+        <Link to={`/item/${item.id}`} className="a_per">
+          <img className="cartItem_img" src={item.img} alt={item.nombre} />
+        </Link>
+        <div className="cartItem_right">
+          <p className="cartItem_right_title">{item.nombre}</p> 
+          <p className="cartItem_right_cat">Categoría: <span>{tituloMayuscula( item.categoria )}</span></p>
+          <p className="cartItem_right_price">Precio ($): <span>{ separadorMiles( item.precio )}</span></p>
+
+          <p className="cartItem_right_cant">Cantidad: <span>{ item.quantity }</span></p>
+          <p className="cartItem_right_sbt">SubTotal ($): <span>{ separadorMiles( item.precio*item.quantity)}</span></p>
+        </div>
+      </div>
+
+      <div className="cartItem_cantidades">
+        <div className="cant_detail">
+          <button onClick={restarItem}>-</button>
+          <p>{item.quantity}</p>
+          <button onClick={sumarItem}>+</button>
+        </div>
+        <p className="cartItem_cantidades_stock">Stock: {stockJuego} {stockJuego > 1 ? 'uds.':'ud.'}</p>
+        <DeleteOutlinedIcon 
+            className="cant_detail_icon"
+            onClick={handlerDeleteBtn}
+          />
+      </div>
+
+    </div>
+  );
+}
+
+export default CartDetail;
+
+
+/*
+<div className="cart_item_detail">
+      <div style={{ width: "100%" }}>
         <Link to={`/item/${item.id}`} className="a_per">
           <img src={item.img} alt={item.nombre} />
         </Link>
@@ -74,7 +110,4 @@ function CartDetail({ item }) {
         $ {separadorMiles(item.precio * item.quantity)}
       </h3>
     </div>
-  );
-}
-
-export default CartDetail;
+*/

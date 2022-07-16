@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
+import "./CartContainer.css";
+
 import { CartContext } from "../../context/CartContext";
 import { separadorMiles } from "../../utilidades/Utilidades";
+
 import CartDetail from "../CartDetail/CartDetail";
-import "./CartContainer.css";
 import visa from '../../images/visa_logo.png'
 import mastercard from '../../images/mastercard_logo.png'
 import american from '../../images/american_logo.png'
