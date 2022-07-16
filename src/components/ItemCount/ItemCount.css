@@ -95,4 +95,7 @@
     .buttons_container {
         flex-direction: row;
     }
+    .itemCount_btn_cart {
+        font-size: 1.3rem;
+    }
 }
