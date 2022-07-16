@@ -35,9 +35,7 @@ function CartContainer() {
             <Link to={"/"} className="a_per">
               <h4>Vaciar Carrito</h4>
             </Link>
-          </div>
-        
-
+          </div>       
       </div>
 
       <div className="cartDetail_container">

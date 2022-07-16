@@ -55,12 +55,17 @@
 .cartDetail_container_right {
     padding: 10px 20px;
     background-color: white;    
-    width: 33%;    
+    width: 100%;    
     border: 1px solid #030C40;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 
+@media only screen and (min-width: 992px) {    
+    .cartDetail_container_right {
+        width: 33%;
+    }
+}
+    
 .cartDetail_container_right h2{
     text-align: center;
     font-size: 1.7rem;

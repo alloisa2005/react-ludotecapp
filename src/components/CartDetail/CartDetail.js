@@ -51,9 +51,12 @@ function CartDetail({ item }) {
         <div className="cartItem_right">
           <p className="cartItem_right_title">{item.nombre}</p> 
           <p className="cartItem_right_cat">Categoría: <span>{tituloMayuscula( item.categoria )}</span></p>
-          <p className="cartItem_right_price">Precio ($): <span>{ separadorMiles( item.precio )}</span></p>
 
-          <p className="cartItem_right_cant">Cantidad: <span>{ item.quantity }</span></p>
+          <div className="div_precios">
+            <p className="cartItem_right_price">Precio ($): <span>{ separadorMiles( item.precio )}</span></p>
+            <p className="cartItem_right_cant">Cantidad: <span>{ item.quantity }</span></p>
+          </div>
+
           <p className="cartItem_right_sbt">SubTotal ($): <span>{ separadorMiles( item.precio*item.quantity)}</span></p>
         </div>
       </div>
