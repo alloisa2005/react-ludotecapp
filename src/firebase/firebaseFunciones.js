@@ -35,8 +35,7 @@ export const getAllJuegos = async (tipo = undefined) => {
 export const updateStockJuego = async (id, stock) => {  
 
   const juego = doc(db, "juegos", id);
-
-  // Set the "capital" field of the city 'DC'
+  
   await updateDoc(juego, {
     stock: stock
   });

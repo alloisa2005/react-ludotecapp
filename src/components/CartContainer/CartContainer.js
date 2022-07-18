@@ -13,11 +13,15 @@ import american from '../../images/american_logo.png'
 import diners from '../../images/diners_logo.jpg'
 import FormCompra from "../FormCompra/FormCompra";
 import NoProductModal from "../NoProductModal/NoProductModal";
+import { updateStockJuego } from "../../firebase/firebaseFunciones";
 
 function CartContainer() {
   const { cartList, clearCart, cantidadItems, montoTotalCart, iva, envio, total } = useContext(CartContext);
 
   const handleClearCarrito = () => {
+    cartList.forEach(item => {      
+      updateStockJuego(item.id, item.stock);
+    })
     clearCart();
   }
 
