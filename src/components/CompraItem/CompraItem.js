@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { separadorMiles, transformarFecha } from "../../utilidades/Utilidades";
 import "./CompraItem.css";
-import delivery from '../../images/delivery.png'
 
 function CompraItem({ compra }) {
   return (
@@ -37,7 +36,7 @@ function CompraItem({ compra }) {
               <>
                 <hr />
                 <div className="compra_card">
-                  <img src={delivery} alt="Img de delivery" />
+                  <img src={process.env.PUBLIC_URL+"assets/delivery.png"} alt="Img de delivery" />
                   <div>
                     <p className="compra_card_p">Impuestos y/o Envío</p>
                     <p className="compra_card_p">
