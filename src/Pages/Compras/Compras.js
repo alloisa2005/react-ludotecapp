@@ -30,7 +30,7 @@ function Compras() {
         <EmptyCompras /> // Si no hay compras muestra el componente vacio
       ) : (
         <>
-          <h2>Mis Compras</h2>          
+          <h2>Historial de Compras</h2>          
           <div className="compras_filtros">
             <div className="compras_filtros_select">
               <h3>Fecha</h3>

@@ -22,7 +22,7 @@ function Home() {
         </div>
         
         <div className='home_boton'>
-            <Link to='/'>
+            <Link to='/tienda'>
               <button className='botones_container_btn btn_blue'>Ir a la Tienda</button>
             </Link> 
         </div>
