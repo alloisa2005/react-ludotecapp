@@ -1,14 +1,13 @@
 
-
 .compras_container {
-    width: 90%;
+    width: 94%;
     margin: 15px auto;
     min-height: calc(100vh - 135px);    
     font-family: 'Alata', sans-serif;
 }
 
 .compras_container h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .compras_filtros {
@@ -17,10 +16,8 @@
     border-radius: 10px;
     margin-top: 10px;
     padding: 10px;
-    display: flex;
-    align-items: center;    
-    justify-content: space-between;
-    padding: 10px 50px;
+    display: flex;            
+    align-items: center;
 }
 
 .compras_filtros_select {
@@ -29,11 +26,13 @@
 }
 
 .compras_filtros_select h3 {
+    margin: 0;
+    font-size: 1.1rem;
     margin-right: 15px;
 }
 
 .compras_filtros_select select {        
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Alata', sans-serif;    
 }
 
@@ -55,3 +54,28 @@
     padding: 8px 0;
     outline: none;
 }
+
+@media only screen and (min-width: 768px) {
+    .compras_container h2 {
+        font-size: 1.8rem;
+    }
+    .compras_filtros_select h3 {     
+        font-size: 1.2rem;     
+    }
+    .compras_filtros_select select {        
+        font-size: 1.2rem;     
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .compras_container h2 {
+        font-size: 2rem;
+    }
+    .compras_filtros_select h3 {     
+        font-size: 1.3rem;     
+    }
+    .compras_filtros_select select {        
+        font-size: 1.3rem;     
+    }
+}
+    

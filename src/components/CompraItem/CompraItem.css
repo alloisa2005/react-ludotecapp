@@ -4,47 +4,57 @@
     border: 1px solid gray;
     border-radius: 10px;
     margin-top: 15px;
-    padding: 20px 25px;
+    padding: 10px;
 }
 
 .compra_total {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    align-items: center;    
 }
+
+.compra_total h4 {
+    margin: 0;
+}
+
 .compra_total span {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: #030C40;
 }
 
 .compra_total_total {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: #030C40;
 }
 
 .compra_card {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 12px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
 }
 
 .compra_card img {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    margin-right: 30px;
-    padding: 8px;
+    margin-right: 30px;    
     transition: all 200ms ease-in-out;
+}
+
+.compra_card_detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .compra_card_p {
     flex: 1;
-    font-size: 1.2rem;
+    font-size: .9rem;
 }
+
 .compra_card img:hover{
     cursor: pointer;    
     border-radius: 10px;
@@ -55,7 +65,23 @@
 .gastos_img {
     width: 120px;
     height: 120px;
-    object-fit: contain;
-    margin-right: 30px;
-    padding: 8px; 
+    object-fit: contain;        
+}
+
+@media only screen and (min-width: 768px) {
+    .compra_total_total {
+        font-size: 1rem;     
+    }
+    .compra_card_p {        
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .compra_total_total {
+        font-size: 1.2rem;     
+    }
+    .compra_card_p {        
+        font-size: 1.2rem;
+    }
 }
