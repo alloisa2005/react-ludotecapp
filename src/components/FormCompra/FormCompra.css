@@ -17,14 +17,14 @@
 }
 
 .alerta_ok {
-    height: 100px!important;
+    height: 120px!important;
     padding: 10px!important;   
     text-align: center!important;; 
 }
 
 .alerta_ok span {
     text-align: center;
-    font-size: 1.7rem!important;
+    font-size: 1.4rem!important;
 }
 
 .btn_oculto{
@@ -39,6 +39,13 @@
 }
 
 @media only screen and (min-width: 768px) {        
+    .alerta_ok {
+        height: 90px!important;        
+    }
+    
+    .alerta_ok span {        
+        font-size: 1.5rem!important;
+    }
     .form_botones {
         margin: 0 auto;
         width: 95%;
@@ -46,7 +53,4 @@
         flex-direction: row;
     }
     
-}
-
-@media only screen and (min-width: 992px) {        
 }
