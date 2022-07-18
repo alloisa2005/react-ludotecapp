@@ -16,6 +16,7 @@ function Compras() {
   }
 
   useEffect(() => {    
+    setCargando(true);
     getAllCompras(filtroFecha).then((res) => {
       setCompras(res);
       setCargando(false);
