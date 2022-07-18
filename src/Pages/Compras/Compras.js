@@ -32,14 +32,13 @@ function Compras() {
         <>
           <h2>Mis Compras</h2>          
           <div className="compras_filtros">
-
             <div className="compras_filtros_select">
               <h3>Fecha</h3>
               <select name="fecha_sel" id="fecha_sel" onChange={handlerChange}>
                 <option value="D">Descendente</option>
                 <option value="A">Ascendente</option>
               </select>
-            </div>            
+            </div>                      
           </div>
 
           {compras.map((compra) => (

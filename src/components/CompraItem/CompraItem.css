@@ -69,6 +69,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .compra_total {        
+        padding: 0 20px;
+    }    
     .compra_total_total {
         font-size: 1rem;     
     }
@@ -78,6 +81,9 @@
 }
 
 @media only screen and (min-width: 992px) {
+    .compra_total {          
+        padding: 0 25px;
+    }
     .compra_total_total {
         font-size: 1.2rem;     
     }
