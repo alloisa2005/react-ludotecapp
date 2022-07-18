@@ -25,3 +25,17 @@
 .empty_container_cosas h1 {
     margin-bottom: 15px;
 }
+
+.container_botones_empty {    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .container_botones_empty {
+        display: flex;
+        flex-direction: row;
+    }
+}

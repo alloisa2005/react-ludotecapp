@@ -15,7 +15,11 @@ import FormCompra from "../FormCompra/FormCompra";
 import NoProductModal from "../NoProductModal/NoProductModal";
 
 function CartContainer() {
-  const { cartList, cantidadItems, montoTotalCart, iva, envio, total } = useContext(CartContext);
+  const { cartList, clearCart, cantidadItems, montoTotalCart, iva, envio, total } = useContext(CartContext);
+
+  const handleClearCarrito = () => {
+    clearCart();
+  }
 
   return (
     <>
@@ -29,12 +33,10 @@ function CartContainer() {
 
           <div className="w-100 d-flex justify-content-between justify-content-sm-end">
             <Link to={"/"} className="a_per mx-sm-4">
-              <h4>Seguir Comprando</h4>
+              <h4 onClick={handleClearCarrito}>Seguir Comprando</h4>
             </Link>
 
-            <Link to={"/"} className="a_per">
-              <h4>Vaciar Carrito</h4>
-            </Link>
+            <h4 onClick={handleClearCarrito} className="vaciar_carrito">Vaciar Carrito</h4>            
           </div>       
       </div>
 

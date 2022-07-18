@@ -127,7 +127,7 @@
     width: 100%;
     text-align: center;
     padding: 9px 20px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: 'Montserrat', sans-serif;  
     border-radius: 10px;    
     cursor: pointer;
@@ -144,4 +144,22 @@
     background-color: white;
     color: #030C40;
     border: 1px solid #030C40;
+}
+
+.vaciar_carrito:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {    
+    .botones_container_btn {     
+        font-size: 1.2rem;        
+        margin-bottom: 18px;
+    }   
+}
+
+@media only screen and (min-width: 992px) {    
+    .botones_container_btn {     
+        font-size: 1.2rem;        
+        margin-bottom: 18px;
+    }   
 }

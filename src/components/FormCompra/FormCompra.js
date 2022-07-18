@@ -75,7 +75,7 @@ export default function FormCompra() {
           Ingrese los datos para la entrega
         </DialogTitle>
         {alerta ? (
-          <Alert variant="filled" severity="error">
+          <Alert className="text-center" variant="filled" severity="error">
             Nombre, Dirección y Email son datos obligatorios
           </Alert>
         ) : null}
@@ -140,7 +140,7 @@ export default function FormCompra() {
           <Acordeon />
         </DialogContent>
 
-        <DialogActions>
+        <DialogActions className="form_botones">
           <button
             className="botones_container_btn btn_white"
             onClick={handleClose}
