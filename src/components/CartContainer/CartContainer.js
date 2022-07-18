@@ -7,10 +7,7 @@ import { CartContext } from "../../context/CartContext";
 import { separadorMiles } from "../../utilidades/Utilidades";
 
 import CartDetail from "../CartDetail/CartDetail";
-import visa from '../../images/visa_logo.png'
-import mastercard from '../../images/mastercard_logo.png'
-import american from '../../images/american_logo.png'
-import diners from '../../images/diners_logo.jpg'
+
 import FormCompra from "../FormCompra/FormCompra";
 import NoProductModal from "../NoProductModal/NoProductModal";
 import { updateStockJuego } from "../../firebase/firebaseFunciones";
@@ -75,10 +72,10 @@ function CartContainer() {
           </div> 
 
           <div className="cartDetail_container_right_section_logos">
-            <img src={visa} alt="Visa Logo" />
-            <img src={mastercard} alt="MasterCard Logo" />
-            <img src={american} alt="American Logo" />
-            <img src={diners} alt="Diners Logo" />
+            <img src={process.env.PUBLIC_URL+"assets/visa_logo.png"} alt="Visa Logo" />
+            <img src={process.env.PUBLIC_URL+"assets/mastercard_logo.png"} alt="MasterCard Logo" />
+            <img src={process.env.PUBLIC_URL+"assets/american_logo.png"} alt="American Logo" />
+            <img src={process.env.PUBLIC_URL+"assets/diners_logo.jpg"} alt="Diners Logo" />
           </div>       
 
           <div className="botones_container">     

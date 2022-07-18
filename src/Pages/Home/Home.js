@@ -18,7 +18,7 @@ function Home() {
         <div className='home_title'>
             <h2>Tu Ludoteca al alcance de un click</h2>        
             <p>Nos encantan los Juegos de Mesa y ahora más que nunca tenemos muchos donde elegir. Si estas cansado de los típicos juegos acá vas a encontrar de tooodo para divertirte.
-            ¡Bienvenidos a nuestra tienda!. La mejor alternativa en Juegos de Mesa y Tablero. Hacemos envíos a todo Uruguay y te orientamos en tu compra.</p>
+            ¡Bienvenidos a nuestra tienda!. La mejor alternativa en Juegos de Mesa y Tablero. Hacemos envíos a todo el país y te orientamos en tu compra.</p>
         </div>
         
         <div className='home_boton'>
