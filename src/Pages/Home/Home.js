@@ -5,6 +5,10 @@ import './Home.css'
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import StarBorderPurple500OutlinedIcon from '@mui/icons-material/StarBorderPurple500Outlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -17,7 +21,11 @@ function Home() {
             ¡Bienvenidos a nuestra tienda!. La mejor alternativa en Juegos de Mesa y Tablero. Hacemos envíos a todo Uruguay y te orientamos en tu compra.</p>
         </div>
         
-        <div>Acá botón</div>
+        <div className='home_boton'>
+            <Link to='/'>
+              <button className='botones_container_btn btn_blue'>Ir a la Tienda</button>
+            </Link> 
+        </div>
 
         <div className='home_caracteristicas'>
             <div className='home_car_detail'>
@@ -35,6 +43,12 @@ function Home() {
                 <h4>Envíos Rápidos</h4>
                 <p>Te ofrecemos envíos rápidos y seguros, en tiempos record, a todo el país y con los costos de envío mas bajo que puedas encontrar.</p>
             </div>
+        </div>
+
+        <div className='home_redes'>
+            <FacebookIcon className='home_car_detail_icon'/>
+            <InstagramIcon className='home_car_detail_icon'/>
+            <WhatsAppIcon className='home_car_detail_icon'/>
         </div>
     </div>
   )
