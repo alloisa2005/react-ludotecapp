@@ -32,7 +32,7 @@ function CompraItem({ compra }) {
               </div>
             </div>
             {index < compra.items.length - 1 ? <hr /> : null}
-            {index === compra.items.length - 1 ? (
+            {index === compra.items.length - 1 ? ( 
               <>
                 <hr />
                 <div className="compra_card">

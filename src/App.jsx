@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>      
 
-      <CartContextProvider>
+      <CartContextProvider> 
 
         <div className="App">
           <NavBarR /> 

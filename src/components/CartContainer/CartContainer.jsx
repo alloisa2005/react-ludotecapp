@@ -26,9 +26,7 @@ function CartContainer() {
     <>
       <div className="cartContainer_title">
           <div className="w-100 text-center text-sm-start">
-            <h2>
-              Mi Carrito ({cantidadItems()} {cantidadItems() > 1 ? "items" : "item"}
-              )
+            <h2>Mi Carrito ({cantidadItems()} {cantidadItems() > 1 ? "items" : "item"})
             </h2>        
           </div>
 
