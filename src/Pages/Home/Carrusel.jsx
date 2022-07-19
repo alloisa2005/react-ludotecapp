@@ -1,9 +1,6 @@
 import React from "react";
-import carr1 from "../../images/carrusel1.jpg";
-import carr2 from "../../images/carrusel2.jpg";
-import carr3 from "../../images/carrusel3.jpg";
-
 import './Carrusel.css'
+
 
 function Carrusel() {
   return (
@@ -15,13 +12,13 @@ function Carrusel() {
       
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={carr1} className="img_carrusel img_carrusel" alt="..." />
+          <img src={process.env.PUBLIC_URL+"assets/carrusel1.jpg"} className="img_carrusel img_carrusel" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src={carr2} className="img_carrusel" alt="..." />
+          <img src={process.env.PUBLIC_URL+"assets/carrusel1.jpg"} className="img_carrusel" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src={carr3} className="img_carrusel" alt="..." />
+          <img src={process.env.PUBLIC_URL+"assets/carrusel1.jpg"} className="img_carrusel" alt="..." />
         </div>
       </div>
       <button
