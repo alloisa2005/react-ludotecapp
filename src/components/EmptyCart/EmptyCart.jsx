@@ -1,8 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import './EmptyCart.css'
-import emptyCart from '../../images/emptyCart.png'
 import { Link } from 'react-router-dom'
-import { TextField } from '@mui/material'
 
 
 function EmptyCart() {  
@@ -10,7 +8,7 @@ function EmptyCart() {
   return (
     <div className='empty_container'>
         <div className='empty_container_img'>
-          <img src={emptyCart} alt="ee" />
+          <img src={process.env.PUBLIC_URL+"assets/emptyCart.png"}  alt="ee" />
         </div>
 
         <div className='empty_container_cosas text-center'>
