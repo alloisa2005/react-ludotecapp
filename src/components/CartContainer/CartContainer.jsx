@@ -32,9 +32,8 @@ function CartContainer() {
 
           <div className="w-100 d-flex justify-content-between justify-content-sm-end">
             <Link to={"/tienda"} className="a_per mx-sm-4">
-              <h4 onClick={handleClearCarrito}>Seguir Comprando</h4>
+              <h4>Seguir Comprando</h4>
             </Link>
-
             <h4 onClick={handleClearCarrito} className="vaciar_carrito">Vaciar Carrito</h4>            
           </div>       
       </div>
