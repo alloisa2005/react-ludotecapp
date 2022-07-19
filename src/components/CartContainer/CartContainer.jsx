@@ -81,7 +81,7 @@ function CartContainer() {
               cantidadItems() > 0 ? <FormCompra /> : <NoProductModal />
             }                   
             
-            <Link to={'/'}>
+            <Link to={'/tienda'}>
               <button className="botones_container_btn btn_white">Seguir comprando</button>
             </Link>            
           </div>          
