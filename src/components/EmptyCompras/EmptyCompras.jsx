@@ -9,7 +9,7 @@ function EmptyCompras() {
       <h1>No ha realizado compras</h1>
       <Link to="/">
         <button className="itemCount_btn_cart">Inicio</button>
-      </Link>
+      </Link>       
     </div>
   );
 }

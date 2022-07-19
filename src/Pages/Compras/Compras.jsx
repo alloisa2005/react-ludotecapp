@@ -1,19 +1,37 @@
 import React, { useState, useEffect } from "react";
 import "./Compras.css";
 import EmptyCompras from "../../components/EmptyCompras/EmptyCompras";
-import { getAllCompras } from "../../firebase/firebaseFunciones";
+import { getAllCompras, getComprasEntreFechas } from "../../firebase/firebaseFunciones";
 import Spinner from "../../components/Spinner/Spinner";
 import CompraItem from "../../components/CompraItem/CompraItem";
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
+let fchInicial = new Date();
 
 function Compras() {
   const [compras, setCompras] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [filtroFecha, setFiltroFecha] = useState('D');  // Inicializo en "D"escendente  
 
+  const [fchDesde, setFchDesde] = useState(fchInicial);
+  const [fchHasta, setFchHasta] = useState(fchInicial);
+
+  const handlerFchDesde = (e) => setFchDesde(e.target.value);
+  const handlerFchHasta = (e) => setFchHasta(e.target.value);
+
   const handlerChange = (e) => {    
     setFiltroFecha(e.target.value);
   }
+
+  const buscarEntreFechas = () => {
+    setCargando(true);
+    getComprasEntreFechas(fchDesde, fchHasta)
+      .then( res => {
+        setCompras(res);
+        setCargando(false);
+      });
+  }
+  
 
   useEffect(() => {    
     setCargando(true);
@@ -39,11 +57,18 @@ function Compras() {
                 <option value="D">Descendente</option>
                 <option value="A">Ascendente</option>
               </select>
+            </div> 
+            <div className="mt-2 d-none d-sm-flex compras_filtros_fechas">
+              <h3>Fch Desde</h3>
+              <input type="date" className="fecha_desde" value={fchDesde} onChange={handlerFchDesde} />
+              <h3>Fch Hasta</h3>
+              <input type="date" className="fecha_hasta" value={fchHasta} onChange={handlerFchHasta} min={fchDesde}/>
+              <SearchRoundedIcon className="compras_search_icon" onClick={buscarEntreFechas} />
             </div>                      
           </div>
 
-          {compras.map((compra) => (
-            <CompraItem key={compra.id} compra={compra} />            
+          {compras.map((compra, index) => (
+            <CompraItem key={index} compra={compra} />            
           ))}
         </>
       )}

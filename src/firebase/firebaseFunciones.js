@@ -68,3 +68,26 @@ export const getAllCompras = async (filtroFecha) => {
 
   return compras;
 };
+
+export const getComprasEntreFechas = async (fchDesde, fchHasta) => {
+  
+  let desde = new Date(fchDesde);
+  let hasta = new Date(fchHasta);
+
+  desde.setDate(desde.getDate() + 1);
+  hasta.setDate(hasta.getDate() + 1);
+  desde.setHours(0, 0, 0, 0);
+  hasta.setHours(24, 0, 0, 0);  
+
+  let q = query(collection(db, "compras"), where("date", ">=", desde), where("date", "<=", hasta));  
+
+  const querySnapshot = await getDocs(q);
+
+  let compras = [];
+
+  querySnapshot.forEach((doc) => {
+    compras.push({ ...doc.data(), id: doc.id });
+  });
+
+  return compras; 
+};
