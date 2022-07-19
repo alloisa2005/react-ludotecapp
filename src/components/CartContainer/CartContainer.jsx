@@ -31,7 +31,7 @@ function CartContainer() {
           </div>
 
           <div className="w-100 d-flex justify-content-between justify-content-sm-end">
-            <Link to={"/"} className="a_per mx-sm-4">
+            <Link to={"/tienda"} className="a_per mx-sm-4">
               <h4 onClick={handleClearCarrito}>Seguir Comprando</h4>
             </Link>
 

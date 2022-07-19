@@ -124,13 +124,6 @@
     }
 }    
 
-@media only screen and (min-width: 768px) {    
-}
-
-
-
-
-
 .division {
     margin-top: 15px;
     width: 100%;
@@ -224,5 +217,8 @@
     .item_detail_game_desc p {
         font-size: 1.2rem;
         line-height: 1.4;
+    }
+    .item_left {
+        flex: 0.5;
     }
 }

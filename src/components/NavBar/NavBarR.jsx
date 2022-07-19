@@ -28,8 +28,8 @@ function NavBarR() {
         >
           <ul className="navbar-nav text-center d-sm-flex flex-sm-row justify-content-sm-around my-sm-2">
             <li className="nav-item mx-1 my-1">
-              <Link to={'/'} className="nav-link titulos_navbar a_per">
-                Inicio
+              <Link to={'/tienda'} className="nav-link titulos_navbar a_per">
+                Tienda
               </Link>
             </li>
             <li className="nav-item mx-1 my-1">
