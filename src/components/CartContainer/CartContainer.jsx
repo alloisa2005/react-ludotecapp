@@ -68,11 +68,11 @@ function CartContainer() {
             <p>{separadorMiles( total() )}</p>  
           </div> 
 
-          <div className="cartDetail_container_right_section_logos">
-            <img src={process.env.PUBLIC_URL+"assets/visa_logo.png"} alt="Visa Logo" />
-            <img src={process.env.PUBLIC_URL+"assets/mastercard_logo.png"} alt="MasterCard Logo" />
-            <img src={process.env.PUBLIC_URL+"assets/american_logo.png"} alt="American Logo" />
-            <img src={process.env.PUBLIC_URL+"assets/diners_logo.jpg"} alt="Diners Logo" />
+          <div className="cartDetail_container_right_section_logos">            
+            <img src={"./assets/visa_logo.png"} alt="Visa Logo" />
+            <img src={"./assets/mastercard_logo.png"} alt="MasterCard Logo" />
+            <img src={"./assets/american_logo.png"} alt="American Logo" />
+            <img src={"./assets/diners_logo.jpg"} alt="Diners Logo" />
           </div>       
 
           <div className="botones_container">     
