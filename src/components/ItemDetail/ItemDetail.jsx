@@ -95,7 +95,7 @@ function ItemDetail({ juego }) {
 
             <div className="division"></div>
 
-            <ItemCount stock={stockJuego} initial={0} onAdd={onAdd} />
+            <ItemCount stock={stockJuego} initial={1} onAdd={onAdd} />
             <ToastContainer />
 
             <div className="division"></div>
