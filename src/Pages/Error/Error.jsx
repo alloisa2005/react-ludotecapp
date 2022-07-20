@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Error() {
   return (
     <div className='error_container'>
-      <img className='error_img' src={process.env.PUBLIC_URL+"assets/error.png"} alt="error" />
+      <img className='error_img' src={"./assets/error.png"} alt="error" />
       <Link to="/" className='error_btn'>Inicio</Link>
     </div>
   )

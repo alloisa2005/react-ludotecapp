@@ -5,7 +5,7 @@ import "./EmptyCompras.css";
 function EmptyCompras() {
   return (
     <div className="compras_noItem">
-      <img src={process.env.PUBLIC_URL+"assets/no_buy.png"}  alt="Sin Compras Img" />
+      <img src={"./assets/no_buy.png"}  alt="Sin Compras Img" />
       <h1>No ha realizado compras</h1>
       <Link to="/">
         <button className="itemCount_btn_cart">Inicio</button>

@@ -36,7 +36,7 @@ function CompraItem({ compra }) {
               <>
                 <hr />
                 <div className="compra_card">
-                  <img src={process.env.PUBLIC_URL+"assets/delivery.png"} alt="Img de delivery" />
+                  <img src={"./assets/delivery.png"} alt="Img de delivery" />
                   <div>
                     <p className="compra_card_p">Impuestos y/o Envío</p>
                     <p className="compra_card_p">

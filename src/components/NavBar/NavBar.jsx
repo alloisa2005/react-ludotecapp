@@ -17,7 +17,7 @@ function NavBar() {
   return (
     <nav className="nav__wrapper">
       <Link to={'/'} className="li_item nav__logo">
-        <img src={process.env.PUBLIC_URL+"assets/logo.png"}  alt="logo" />  
+        <img src={"./assets/logo.png"}  alt="logo" />  
         <h3>Ludotecapp</h3> 
       </Link>
 

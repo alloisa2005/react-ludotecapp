@@ -12,13 +12,13 @@ function Carrusel() {
       
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={process.env.PUBLIC_URL+"assets/carrusel1.jpg"} className="img_carrusel img_carrusel" alt="..." />
+          <img src={"./assets/carrusel1.jpg"} className="img_carrusel img_carrusel" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src={process.env.PUBLIC_URL+"assets/carrusel1.jpg"} className="img_carrusel" alt="..." />
+          <img src={"./assets/carrusel1.jpg"} className="img_carrusel" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src={process.env.PUBLIC_URL+"assets/carrusel1.jpg"} className="img_carrusel" alt="..." />
+          <img src={"./assets/carrusel1.jpg"} className="img_carrusel" alt="..." />
         </div>
       </div>
       <button

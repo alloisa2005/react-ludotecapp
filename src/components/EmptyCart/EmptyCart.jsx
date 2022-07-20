@@ -8,7 +8,7 @@ function EmptyCart() {
   return (
     <div className='empty_container'>
         <div className='empty_container_img'>
-          <img src={process.env.PUBLIC_URL+"assets/emptyCart.png"}  alt="ee" />
+          <img src={"./assets/emptyCart.png"}  alt="ee" />
         </div>
 
         <div className='empty_container_cosas text-center'>

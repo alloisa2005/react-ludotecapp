@@ -8,7 +8,7 @@ function NavBarR() {
     <nav className="navbar navbar-expand-lg navbar-dark" id="miHeader">
       <div className="container">
         <Link className="navbar-brand navbar_logo" to={"/"}>
-          <img className="d-none d-sm-block nav__logo_img" src={process.env.PUBLIC_URL+"assets/logo.png"} alt="Logo" />
+          <img className="d-none d-sm-block nav__logo_img" src={"./assets/logo.png"} alt="Logo" />
           <h3>Ludotecapp</h3>
         </Link>
         <button
