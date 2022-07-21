@@ -11,6 +11,7 @@ function CompraItem({ compra }) {
         <h4 className="compra_total_total">
           {transformarFecha(compra.date)} -{" "}
           {compra.buyer.name}
+          <span style={{fontSize:"1rem"}} className="d-none d-sm-inline"> - Compra: <span style={{fontWeight:"bold", fontSize:"1.1rem"}}>{compra.id}</span></span>
         </h4>
         <h4 className="compra_total_total">
           Total ($): {separadorMiles(compra.total.total)}

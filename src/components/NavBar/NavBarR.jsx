@@ -2,14 +2,15 @@ import React from "react";
 import './NavBarR.css' 
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
+import Fade from 'react-reveal/Fade';
 
 function NavBarR() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" id="miHeader">
       <div className="container">
         <Link className="navbar-brand navbar_logo" to={"/"}>
-          <img className="d-none d-sm-block nav__logo_img" src={"./assets/logo.png"} alt="Logo" />
-          <h3>Ludotecapp</h3>
+          <Fade left><img className="d-none d-sm-block nav__logo_img" src={"./assets/logo.png"} alt="Logo" /></Fade>
+          <Fade right><h3>Ludotecapp</h3></Fade>
         </Link>
         <button
           className="navbar-toggler"

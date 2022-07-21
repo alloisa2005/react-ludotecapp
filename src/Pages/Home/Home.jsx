@@ -1,5 +1,6 @@
 import React from 'react'
 import Carrusel from './Carrusel'
+import Fade from 'react-reveal/Fade';
 
 import './Home.css'
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
@@ -28,21 +29,27 @@ function Home() {
         </div>
 
         <div className='home_caracteristicas'>
-            <div className='home_car_detail'>
-                <LocalOfferOutlinedIcon className='home_car_detail_icon'/>
-                <h4>Grandes Ofertas</h4>
-                <p>En Ludotecapp te ofrecemos las mejores ofertas en juegos de mesa, precios increíbles en títulos únicos y exclusivos, con todos los métodos de pago.</p>
-            </div>
-            <div className='home_car_detail'>
-                <StarBorderPurple500OutlinedIcon className='home_car_detail_icon' />
-                <h4>Novedades Exclusivas</h4>
-                <p>Solo aquí encontrarás novedades únicas y exclusivas en juegos de mesa importados de las mejores y más reconocidas editoriales.</p>
-            </div>
-            <div className='home_car_detail'>
-                <LocalShippingOutlinedIcon className='home_car_detail_icon' />
-                <h4>Envíos Rápidos</h4>
-                <p>Te ofrecemos envíos rápidos y seguros, en tiempos record, a todo el país y con los costos de envío mas bajo que puedas encontrar.</p>
-            </div>
+            <Fade left>
+                <div className='home_car_detail'>                
+                        <LocalOfferOutlinedIcon className='home_car_detail_icon'/>
+                        <h4>Grandes Ofertas</h4>
+                        <p>En Ludotecapp te ofrecemos las mejores ofertas en juegos de mesa, precios increíbles en títulos únicos y exclusivos, con todos los métodos de pago.</p>                
+                </div>
+            </Fade>
+            <Fade top>
+                <div className='home_car_detail'>
+                    <StarBorderPurple500OutlinedIcon className='home_car_detail_icon' />
+                    <h4>Novedades Exclusivas</h4>
+                    <p>Solo aquí encontrarás novedades únicas y exclusivas en juegos de mesa importados de las mejores y más reconocidas editoriales.</p>
+                </div>
+            </Fade>
+            <Fade right>
+                <div className='home_car_detail'>
+                    <LocalShippingOutlinedIcon className='home_car_detail_icon' />
+                    <h4>Envíos Rápidos</h4>
+                    <p>Te ofrecemos envíos rápidos y seguros, en tiempos record, a todo el país y con los costos de envío mas bajo que puedas encontrar.</p>
+                </div>
+            </Fade>
         </div>
 
         <div className='home_redes'>
